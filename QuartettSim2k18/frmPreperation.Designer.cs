@@ -30,20 +30,20 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panel_Gegner = new System.Windows.Forms.Panel();
-            this.label_Gegnerzahl = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button2_Gegner = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label_Gegnerzahl = new System.Windows.Forms.Label();
             this.panel_Decks = new System.Windows.Forms.Panel();
-            this.label_Deck = new System.Windows.Forms.Label();
-            this.button_DeckWählen = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label_GewähltesDeck = new System.Windows.Forms.Label();
             this.button_DeckDef = new System.Windows.Forms.Button();
             this.label_DeckDef = new System.Windows.Forms.Label();
-            this.label_GewähltesDeck = new System.Windows.Forms.Label();
+            this.button_DeckWählen = new System.Windows.Forms.Button();
+            this.label_Deck = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton_Zeit = new System.Windows.Forms.RadioButton();
-            this.radioButton_LastManStanding = new System.Windows.Forms.RadioButton();
             this.radioButton_QuartettAnzahl = new System.Windows.Forms.RadioButton();
+            this.radioButton_LastManStanding = new System.Windows.Forms.RadioButton();
+            this.radioButton_Zeit = new System.Windows.Forms.RadioButton();
             this.panel_Gegner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel_Decks.SuspendLayout();
@@ -55,7 +55,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button1.Location = new System.Drawing.Point(17, 394);
-            this.button1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.button1.Margin = new System.Windows.Forms.Padding(8);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(301, 58);
             this.button1.TabIndex = 0;
@@ -73,14 +73,15 @@
             this.panel_Gegner.Size = new System.Drawing.Size(306, 100);
             this.panel_Gegner.TabIndex = 1;
             // 
-            // label_Gegnerzahl
+            // button2_Gegner
             // 
-            this.label_Gegnerzahl.AutoSize = true;
-            this.label_Gegnerzahl.Location = new System.Drawing.Point(5, 7);
-            this.label_Gegnerzahl.Name = "label_Gegnerzahl";
-            this.label_Gegnerzahl.Size = new System.Drawing.Size(177, 33);
-            this.label_Gegnerzahl.TabIndex = 0;
-            this.label_Gegnerzahl.Text = "Anzahl Gegner";
+            this.button2_Gegner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2_Gegner.Location = new System.Drawing.Point(11, 55);
+            this.button2_Gegner.Name = "button2_Gegner";
+            this.button2_Gegner.Size = new System.Drawing.Size(290, 40);
+            this.button2_Gegner.TabIndex = 2;
+            this.button2_Gegner.Text = "Gegner definieren";
+            this.button2_Gegner.UseVisualStyleBackColor = true;
             // 
             // numericUpDown1
             // 
@@ -104,15 +105,14 @@
             0,
             0});
             // 
-            // button2_Gegner
+            // label_Gegnerzahl
             // 
-            this.button2_Gegner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2_Gegner.Location = new System.Drawing.Point(11, 55);
-            this.button2_Gegner.Name = "button2_Gegner";
-            this.button2_Gegner.Size = new System.Drawing.Size(290, 40);
-            this.button2_Gegner.TabIndex = 2;
-            this.button2_Gegner.Text = "Gegner definieren";
-            this.button2_Gegner.UseVisualStyleBackColor = true;
+            this.label_Gegnerzahl.AutoSize = true;
+            this.label_Gegnerzahl.Location = new System.Drawing.Point(5, 7);
+            this.label_Gegnerzahl.Name = "label_Gegnerzahl";
+            this.label_Gegnerzahl.Size = new System.Drawing.Size(177, 33);
+            this.label_Gegnerzahl.TabIndex = 0;
+            this.label_Gegnerzahl.Text = "Anzahl Gegner";
             // 
             // panel_Decks
             // 
@@ -127,27 +127,14 @@
             this.panel_Decks.Size = new System.Drawing.Size(306, 116);
             this.panel_Decks.TabIndex = 2;
             // 
-            // label_Deck
+            // label_GewähltesDeck
             // 
-            this.label_Deck.AutoSize = true;
-            this.label_Deck.Location = new System.Drawing.Point(5, 2);
-            this.label_Deck.Name = "label_Deck";
-            this.label_Deck.Size = new System.Drawing.Size(197, 33);
-            this.label_Deck.TabIndex = 0;
-            this.label_Deck.Text = "Deck auswählen:";
-            // 
-            // button_DeckWählen
-            // 
-            this.button_DeckWählen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_DeckWählen.Location = new System.Drawing.Point(209, 6);
-            this.button_DeckWählen.Name = "button_DeckWählen";
-            this.button_DeckWählen.Size = new System.Drawing.Size(92, 29);
-            this.button_DeckWählen.TabIndex = 1;
-            this.button_DeckWählen.UseVisualStyleBackColor = true;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.label_GewähltesDeck.AutoSize = true;
+            this.label_GewähltesDeck.Location = new System.Drawing.Point(5, 68);
+            this.label_GewähltesDeck.Name = "label_GewähltesDeck";
+            this.label_GewähltesDeck.Size = new System.Drawing.Size(192, 33);
+            this.label_GewähltesDeck.TabIndex = 4;
+            this.label_GewähltesDeck.Text = "Gewähltes Deck";
             // 
             // button_DeckDef
             // 
@@ -157,6 +144,7 @@
             this.button_DeckDef.Size = new System.Drawing.Size(92, 29);
             this.button_DeckDef.TabIndex = 3;
             this.button_DeckDef.UseVisualStyleBackColor = true;
+            this.button_DeckDef.Click += new System.EventHandler(this.button_DeckDef_Click);
             // 
             // label_DeckDef
             // 
@@ -167,14 +155,27 @@
             this.label_DeckDef.TabIndex = 2;
             this.label_DeckDef.Text = "Decks definieren:";
             // 
-            // label_GewähltesDeck
+            // button_DeckWählen
             // 
-            this.label_GewähltesDeck.AutoSize = true;
-            this.label_GewähltesDeck.Location = new System.Drawing.Point(5, 68);
-            this.label_GewähltesDeck.Name = "label_GewähltesDeck";
-            this.label_GewähltesDeck.Size = new System.Drawing.Size(192, 33);
-            this.label_GewähltesDeck.TabIndex = 4;
-            this.label_GewähltesDeck.Text = "Gewähltes Deck";
+            this.button_DeckWählen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_DeckWählen.Location = new System.Drawing.Point(209, 6);
+            this.button_DeckWählen.Name = "button_DeckWählen";
+            this.button_DeckWählen.Size = new System.Drawing.Size(92, 29);
+            this.button_DeckWählen.TabIndex = 1;
+            this.button_DeckWählen.UseVisualStyleBackColor = true;
+            // 
+            // label_Deck
+            // 
+            this.label_Deck.AutoSize = true;
+            this.label_Deck.Location = new System.Drawing.Point(5, 2);
+            this.label_Deck.Name = "label_Deck";
+            this.label_Deck.Size = new System.Drawing.Size(197, 33);
+            this.label_Deck.TabIndex = 0;
+            this.label_Deck.Text = "Deck auswählen:";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // panel1
             // 
@@ -187,16 +188,16 @@
             this.panel1.Size = new System.Drawing.Size(306, 130);
             this.panel1.TabIndex = 3;
             // 
-            // radioButton_Zeit
+            // radioButton_QuartettAnzahl
             // 
-            this.radioButton_Zeit.AutoSize = true;
-            this.radioButton_Zeit.Location = new System.Drawing.Point(17, 5);
-            this.radioButton_Zeit.Name = "radioButton_Zeit";
-            this.radioButton_Zeit.Size = new System.Drawing.Size(128, 37);
-            this.radioButton_Zeit.TabIndex = 0;
-            this.radioButton_Zeit.TabStop = true;
-            this.radioButton_Zeit.Text = "Auf Zeit";
-            this.radioButton_Zeit.UseVisualStyleBackColor = true;
+            this.radioButton_QuartettAnzahl.AutoSize = true;
+            this.radioButton_QuartettAnzahl.Location = new System.Drawing.Point(17, 88);
+            this.radioButton_QuartettAnzahl.Name = "radioButton_QuartettAnzahl";
+            this.radioButton_QuartettAnzahl.Size = new System.Drawing.Size(154, 37);
+            this.radioButton_QuartettAnzahl.TabIndex = 2;
+            this.radioButton_QuartettAnzahl.TabStop = true;
+            this.radioButton_QuartettAnzahl.Text = "4 Quartett";
+            this.radioButton_QuartettAnzahl.UseVisualStyleBackColor = true;
             // 
             // radioButton_LastManStanding
             // 
@@ -209,16 +210,16 @@
             this.radioButton_LastManStanding.Text = "Last man standing";
             this.radioButton_LastManStanding.UseVisualStyleBackColor = true;
             // 
-            // radioButton_QuartettAnzahl
+            // radioButton_Zeit
             // 
-            this.radioButton_QuartettAnzahl.AutoSize = true;
-            this.radioButton_QuartettAnzahl.Location = new System.Drawing.Point(17, 88);
-            this.radioButton_QuartettAnzahl.Name = "radioButton_QuartettAnzahl";
-            this.radioButton_QuartettAnzahl.Size = new System.Drawing.Size(154, 37);
-            this.radioButton_QuartettAnzahl.TabIndex = 2;
-            this.radioButton_QuartettAnzahl.TabStop = true;
-            this.radioButton_QuartettAnzahl.Text = "4 Quartett";
-            this.radioButton_QuartettAnzahl.UseVisualStyleBackColor = true;
+            this.radioButton_Zeit.AutoSize = true;
+            this.radioButton_Zeit.Location = new System.Drawing.Point(17, 5);
+            this.radioButton_Zeit.Name = "radioButton_Zeit";
+            this.radioButton_Zeit.Size = new System.Drawing.Size(128, 37);
+            this.radioButton_Zeit.TabIndex = 0;
+            this.radioButton_Zeit.TabStop = true;
+            this.radioButton_Zeit.Text = "Auf Zeit";
+            this.radioButton_Zeit.UseVisualStyleBackColor = true;
             // 
             // frmPreperation
             // 
@@ -231,7 +232,7 @@
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.Margin = new System.Windows.Forms.Padding(8);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPreperation";

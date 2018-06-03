@@ -16,5 +16,11 @@ namespace QuartettSim2k18
         {
             InitializeComponent();
         }
+
+        private void button_DeckDef_Click(object sender, EventArgs e)
+        {
+            DeckAssistant myAssistant = new DeckAssistant();
+            myAssistant.SetDeckStructure();
+        }
     }
 }
