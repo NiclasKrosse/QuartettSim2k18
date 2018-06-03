@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace QuartettSim2k18
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
+        }
+
+        private void button_Start_Click(object sender, EventArgs e)
+        {
+            frmPreperation nFrmPreperation = new frmPreperation();
+            nFrmPreperation.ShowDialog();
+
         }
     }
 }
