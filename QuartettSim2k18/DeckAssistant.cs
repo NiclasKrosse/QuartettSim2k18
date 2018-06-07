@@ -11,56 +11,59 @@ namespace QuartettSim2k18
 {
     class DeckAssistant
     {
-        private DeckStructure myDeckStructure;
-        public void SetDeckStructure()
-        {
-            myDeckStructure = new DeckStructure();
-            //Testdaten
-            //todo 8 Quartetts //jeweils 4 Karten , das überprüfen
-            myDeckStructure.deckName = "Testdeck";
+        public DeckStructure myDeckStructure;
 
-            DeckStructure.Quartett myQuartett = new DeckStructure.Quartett();
-            DeckStructure.QuartettCard myCard_1 = new DeckStructure.QuartettCard();
-            DeckStructure.CardProperties myCardProperties = new DeckStructure.CardProperties();
 
-            //Anzahl der Eigenschaften kann in der Ersetllungsmaske festgelegt werden
-            //Alles ausser der Wert soll nur einmal gesetzt werden
-            myCard_1.cardProperties = new List<DeckStructure.CardProperties>();
-            myDeckStructure.listOfQuartetts = new List<DeckStructure.Quartett>();
-            myQuartett.Cards = new List<DeckStructure.QuartettCard>();
+        //public void SetDeckStructure()
+        //{
+        //    myDeckStructure = new DeckStructure();
+        //    //Testdaten
+        //    //todo 8 Quartetts //jeweils 4 Karten , das überprüfen
+        //    myDeckStructure.deckName = "Testdeck";
 
-            myCardProperties.propertyName = "Verbrauch: ";
-            myCardProperties.greaterIsBetter = false;
-            myCardProperties.propertyDisplayValue = "8 l/100km";
-            myCardProperties.propertyValue = 8;
-            myCard_1.cardProperties.Add(myCardProperties);
+        //    DeckStructure.Quartett myQuartett = new DeckStructure.Quartett();
+        //    DeckStructure.QuartettCard myCard_1 = new DeckStructure.QuartettCard();
+        //    DeckStructure.CardProperties myCardProperties = new DeckStructure.CardProperties();
 
-            myCardProperties.propertyName = "Leistung: ";
-            myCardProperties.greaterIsBetter = true;
-            myCardProperties.propertyDisplayValue = "160 PS";
-            myCardProperties.propertyValue = 160;
-            myCard_1.cardProperties.Add(myCardProperties);
+        //    //Anzahl der Eigenschaften kann in der Ersetllungsmaske festgelegt werden
+        //    //Alles ausser der Wert soll nur einmal gesetzt werden
+        //    myCard_1.cardProperties = new List<DeckStructure.CardProperties>();
+        //    myDeckStructure.listOfQuartetts = new List<DeckStructure.Quartett>();
+        //    myQuartett.Cards = new List<DeckStructure.QuartettCard>();
 
-            myCardProperties.propertyName = "Türen: ";
-            myCardProperties.greaterIsBetter = true;
-            myCardProperties.propertyDisplayValue = "5 Türen";
-            myCardProperties.propertyValue = 5;
-            myCard_1.cardProperties.Add(myCardProperties);
+        //    myCardProperties.propertyName = "Verbrauch: ";
+        //    myCardProperties.greaterIsBetter = false;
+        //    myCardProperties.propertyDisplayValue = "8 l/100km";
+        //    myCardProperties.propertyValue = 8;
+        //    myCard_1.cardProperties.Add(myCardProperties);
 
-            myCardProperties.propertyName = "Gewicht: ";
-            myCardProperties.greaterIsBetter = false;
-            myCardProperties.propertyDisplayValue = "1600 kg";
-            myCardProperties.propertyValue = 1600;
-            myCard_1.cardProperties.Add(myCardProperties);
+        //    myCardProperties.propertyName = "Leistung: ";
+        //    myCardProperties.greaterIsBetter = true;
+        //    myCardProperties.propertyDisplayValue = "160 PS";
+        //    myCardProperties.propertyValue = 160;
+        //    myCard_1.cardProperties.Add(myCardProperties);
 
-            myQuartett.Cards.Add(myCard_1);
+        //    myCardProperties.propertyName = "Türen: ";
+        //    myCardProperties.greaterIsBetter = true;
+        //    myCardProperties.propertyDisplayValue = "5 Türen";
+        //    myCardProperties.propertyValue = 5;
+        //    myCard_1.cardProperties.Add(myCardProperties);
 
-            myDeckStructure.listOfQuartetts.Add(myQuartett);
+        //    myCardProperties.propertyName = "Gewicht: ";
+        //    myCardProperties.greaterIsBetter = false;
+        //    myCardProperties.propertyDisplayValue = "1600 kg";
+        //    myCardProperties.propertyValue = 1600;
+        //    myCard_1.cardProperties.Add(myCardProperties);
 
-            ExportXml(myDeckStructure);
-        }
+        //    myQuartett.Cards.Add(myCard_1);
 
-        public void ExportXml(DeckStructure deckStructure)
+        //    myDeckStructure.listOfQuartetts.Add(myQuartett);
+
+        //    ExportXml(myDeckStructure);
+        //}
+
+
+        public void ExportXml(DeckStructure deckStructure,String exportPath)
         {
             XmlSerializer mySerializer = new XmlSerializer(typeof(DeckStructure));
             TextWriter myTextWriter = new StreamWriter("test.xml");
@@ -78,21 +81,21 @@ namespace QuartettSim2k18
         public struct Quartett
         {
             public String quartettName;
-            public int quartettCode;
             public List<QuartettCard> Cards;
         }
         public struct QuartettCard
         {
-            public Image cardImage;
+            public String cardName;
+            public String cardImagePath;
             public List<CardProperties> cardProperties;
         }
 
         public struct CardProperties
         {
-            public string propertyName;
-            public string propertyDisplayValue;
-            public int propertyValue;
-            public Boolean greaterIsBetter;
+            public string propertyName; //z.B. Hubraum, Leistung, Gewicht
+            public string propertyDisplayValue; //z.B. [Leistung] 200 PS
+            public int propertyValue; //z.B [Leistung]200
+            public Boolean greaterIsBetter; 
         }
     }
 }

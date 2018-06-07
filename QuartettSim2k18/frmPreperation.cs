@@ -20,7 +20,10 @@ namespace QuartettSim2k18
         private void button_DeckDef_Click(object sender, EventArgs e)
         {
             DeckAssistant myAssistant = new DeckAssistant();
-            myAssistant.SetDeckStructure();
+            //myAssistant.SetDeckStructure();
+
+            frmDeckEdit myDeckEdit = new frmDeckEdit();
+            myDeckEdit.ShowDialog();
         }
     }
 }
