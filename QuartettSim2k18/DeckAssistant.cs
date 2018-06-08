@@ -80,6 +80,7 @@ namespace QuartettSim2k18
 
         public struct Quartett
         {
+            public int quartettNummer;
             public String quartettName;
             public List<QuartettCard> Cards;
         }
