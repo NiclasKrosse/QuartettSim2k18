@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace QuartettSim2k18
 {
@@ -99,7 +101,7 @@ namespace QuartettSim2k18
                 label_Zwischenspeichern.Visible = false;
                 label_QuartettDef.Enabled = false;
             }
-            
+
         }
 
         private Boolean Zwischenspeichern()
@@ -139,10 +141,10 @@ namespace QuartettSim2k18
             }
             else
             {
-            myDeckAssistant.myDeckStructure.deckName = mDeckName;
+                myDeckAssistant.myDeckStructure.deckName = mDeckName;
             }
             RenameAndShowProperties();
-            
+
             return success;
         }
 
@@ -154,15 +156,15 @@ namespace QuartettSim2k18
                 if (currenttag <= mProprtiesAmount)
                 {
                     tempLabel.Visible = true;
-                    mPropertyValueTextBoxList.ElementAt(currenttag -1 ).Visible = true;
-                    mPropertyDisplayValueTextBoxList.ElementAt(currenttag -1 ).Visible = true;
-                    tempLabel.Text = mPropertyTextBoxList.ElementAt(currenttag -1).Text;
+                    mPropertyValueTextBoxList.ElementAt(currenttag - 1).Visible = true;
+                    mPropertyDisplayValueTextBoxList.ElementAt(currenttag - 1).Visible = true;
+                    tempLabel.Text = mPropertyTextBoxList.ElementAt(currenttag - 1).Text;
                 }
                 else
                 {
                     tempLabel.Visible = false;
-                    mPropertyValueTextBoxList.ElementAt(currenttag-1).Visible = false;
-                    mPropertyDisplayValueTextBoxList.ElementAt(currenttag -1).Visible = false;
+                    mPropertyValueTextBoxList.ElementAt(currenttag - 1).Visible = false;
+                    mPropertyDisplayValueTextBoxList.ElementAt(currenttag - 1).Visible = false;
                 }
             }
         }
@@ -199,6 +201,9 @@ namespace QuartettSim2k18
         List<Label> mPropertyLabelList = new List<Label>();
         List<TextBox> mPropertyValueTextBoxList = new List<TextBox>();
         List<TextBox> mPropertyDisplayValueTextBoxList = new List<TextBox>();
+
+        List<CheckButton> mCheckButtonsList = new List<CheckButton>();
+
         private void FillPanelList()
         {
             mQuartettPanelList.Add(panel_Eigenschaften);
@@ -218,6 +223,14 @@ namespace QuartettSim2k18
             mPropertyTextBoxList.Add(textBox_Eigenschaft4);
             mPropertyTextBoxList.Add(textBox_Eigenschaft5);
             mPropertyTextBoxList.Add(textBox_Eigenschaft6);
+
+            mCheckButtonsList.Add(checkButton_BiB);
+            mCheckButtonsList.Add(checkButton_BiB1);
+            mCheckButtonsList.Add(checkButton_BiB3);
+            mCheckButtonsList.Add(checkButton_BiB4);
+            mCheckButtonsList.Add(checkButton_BiB5);
+            mCheckButtonsList.Add(checkButton_BiB6);
+
             //Page 3
             mPropertyLabelList.Add(label_P1);
             mPropertyLabelList.Add(label_P2);
@@ -279,6 +292,11 @@ namespace QuartettSim2k18
 
         #endregion
 
+        #region Cards
+
+        private List<DeckStructure.Quartett> mQuartetts = new List<DeckStructure.Quartett>();
+        private List<DeckStructure.QuartettCard> mQuartettCards = new List<DeckStructure.QuartettCard>();
+
         private void button_BildWählen_Click(object sender, EventArgs e)
         {
             OpenFileDialog localFolderBrowserDialog = new OpenFileDialog();
@@ -292,6 +310,126 @@ namespace QuartettSim2k18
             {
                 MessageBox.Show("Kein gültiges Bild ausgewählt!");
             }
+        }
+
+        private void button_NextCard_Click(object sender, EventArgs e)
+        {
+            if (SaveQuartettCard())
+            {
+                ClearCardControls();
+                label_Kartennummer.Text = "Karte " + (mQuartettCards.Count + 1);
+                if (mQuartettCards.Count == 3)
+                {
+                    button_NextCard.Enabled = false;
+                    button_NextQuartett.Enabled = true;
+                    //Todo Button weiter ausblenden
+                }
+            }
+            else
+            {
+                MessageBox.Show("Überprüfen Sie Ihre Eingaben!", "Fehler", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+
+
+        }
+
+        private void ClearCardControls()
+        {
+            foreach (TextBox tmpTextBox in mPropertyDisplayValueTextBoxList)
+            {
+                tmpTextBox.Text = "";
+            }
+
+            foreach (var tmpTextBox in mPropertyValueTextBoxList)
+            {
+                tmpTextBox.Text = "";
+            }
+
+            textBox_CardName.Text = "";
+            pictureBox_Image.ImageLocation = "";
+        }
+
+        //todo Declare Current Quartett
+        //Todo Save When all 4 Cards are done
+        private DeckStructure.Quartett myCurrentQuartett = new DeckStructure.Quartett();
+        private Boolean SaveQuartettCard()
+        {
+            Boolean nResult = true;
+            List<DeckStructure.CardProperties> nCardProperties = new List<DeckStructure.CardProperties>();
+            DeckStructure.QuartettCard nCard = new DeckStructure.QuartettCard();
+            try
+            {
+
+                if (textBox_CardName.Text != "")
+                {
+                    nCard.cardName = textBox_CardName.Text;
+                }
+                else
+                {
+                    nResult = false;
+                }
+
+                if (pictureBox_Image.ImageLocation != "")
+                {
+                    nCard.cardImagePath = pictureBox_Image.ImageLocation;
+                }
+
+                for (int i = 1; i < mProprtiesAmount + 1; i++)
+                {
+
+                    DeckStructure.CardProperties myCardProperties = new DeckStructure.CardProperties();
+                    myCardProperties.propertyName = mPropertyTextBoxList.ElementAt(i -1).Text;
+                    myCardProperties.propertyDisplayValue = mPropertyDisplayValueTextBoxList.ElementAt(i -1 ).Text;
+                    myCardProperties.propertyValue = double.Parse(mPropertyValueTextBoxList.ElementAt(i -1).Text);
+                        //Convert.ToInt32( mPropertyValueTextBoxList.ElementAt(i).Text); //todo
+                    myCardProperties.greaterIsBetter = mCheckButtonsList.ElementAt(i -1).Checked;
+                    nCardProperties.Add(myCardProperties);
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                nResult = false;
+            }
+
+            if (nResult)
+            {
+                nCard.cardProperties = nCardProperties;
+                mQuartettCards.Add(nCard);
+            }
+            return nResult;
+        }
+        #endregion
+
+        private void button_NextQuartett_Click(object sender, EventArgs e)
+        {
+            if (!SaveQuartettCard())
+            {
+                MessageBox.Show("Überprüfen Sie Ihre Eingaben!", "Fehler", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (textBox_Quartettname.Text != "")
+            {
+                myCurrentQuartett.Cards = mQuartettCards;
+                mQuartetts.Add(myCurrentQuartett);
+
+                //Clear for next use
+                myCurrentQuartett = new DeckStructure.Quartett();
+                mQuartettCards = new List<DeckStructure.QuartettCard>();
+
+                ClearCardControls();
+                label_Kartennummer.Text = "Karte " + (mQuartettCards.Count + 1);
+
+                button_NextQuartett.Enabled = false;
+                button_NextCard.Enabled = true;
+
+                //todo Wenn gewünschte Anzahl an Quartetten erreicht ist, dann Wandle diesen Button in einen "Abschließen Button um"
+            }
+
         }
     }
 }
