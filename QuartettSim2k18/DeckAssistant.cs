@@ -94,7 +94,7 @@ namespace QuartettSim2k18
         {
             public string propertyName; //z.B. Hubraum, Leistung, Gewicht
             public string propertyDisplayValue; //z.B. [Leistung] 200 PS
-            public int propertyValue; //z.B [Leistung]200
+            public double propertyValue; //z.B [Leistung]200
             public Boolean greaterIsBetter; 
         }
     }

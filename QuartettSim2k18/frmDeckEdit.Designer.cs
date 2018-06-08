@@ -286,6 +286,7 @@
             this.button_NextCard.TabIndex = 22;
             this.button_NextCard.Text = "Nächste Karte";
             this.button_NextCard.UseVisualStyleBackColor = true;
+            this.button_NextCard.Click += new System.EventHandler(this.button_NextCard_Click);
             // 
             // textBox_CardName
             // 
@@ -500,6 +501,7 @@
             this.button_NextQuartett.Text = "Nächstes";
             this.button_NextQuartett.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_NextQuartett.UseVisualStyleBackColor = true;
+            this.button_NextQuartett.Click += new System.EventHandler(this.button_NextQuartett_Click);
             // 
             // textBox_Quartettname
             // 
