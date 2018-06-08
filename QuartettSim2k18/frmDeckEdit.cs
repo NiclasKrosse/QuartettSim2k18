@@ -296,6 +296,7 @@ namespace QuartettSim2k18
 
         private List<DeckStructure.Quartett> mQuartetts = new List<DeckStructure.Quartett>();
         private List<DeckStructure.QuartettCard> mQuartettCards = new List<DeckStructure.QuartettCard>();
+        private DeckStructure.Quartett myCurrentQuartett = new DeckStructure.Quartett();
 
         private void button_BildWählen_Click(object sender, EventArgs e)
         {
@@ -352,7 +353,6 @@ namespace QuartettSim2k18
 
         //todo Declare Current Quartett
         //Todo Save When all 4 Cards are done
-        private DeckStructure.Quartett myCurrentQuartett = new DeckStructure.Quartett();
         private Boolean SaveQuartettCard()
         {
             Boolean nResult = true;
@@ -382,7 +382,6 @@ namespace QuartettSim2k18
                     myCardProperties.propertyName = mPropertyTextBoxList.ElementAt(i -1).Text;
                     myCardProperties.propertyDisplayValue = mPropertyDisplayValueTextBoxList.ElementAt(i -1 ).Text;
                     myCardProperties.propertyValue = double.Parse(mPropertyValueTextBoxList.ElementAt(i -1).Text);
-                        //Convert.ToInt32( mPropertyValueTextBoxList.ElementAt(i).Text); //todo
                     myCardProperties.greaterIsBetter = mCheckButtonsList.ElementAt(i -1).Checked;
                     nCardProperties.Add(myCardProperties);
                 }
@@ -415,6 +414,7 @@ namespace QuartettSim2k18
             if (textBox_Quartettname.Text != "")
             {
                 myCurrentQuartett.Cards = mQuartettCards;
+                myCurrentQuartett.quartettNummer = mQuartetts.Count + 1;
                 mQuartetts.Add(myCurrentQuartett);
 
                 //Clear for next use
