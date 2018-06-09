@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_SpielStarten = new System.Windows.Forms.Button();
             this.panel_Gegner = new System.Windows.Forms.Panel();
             this.button2_Gegner = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -50,17 +50,18 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // button_SpielStarten
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(17, 394);
-            this.button1.Margin = new System.Windows.Forms.Padding(8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(301, 58);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Spiel Starten";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_SpielStarten.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_SpielStarten.ForeColor = System.Drawing.Color.White;
+            this.button_SpielStarten.Location = new System.Drawing.Point(17, 394);
+            this.button_SpielStarten.Margin = new System.Windows.Forms.Padding(8);
+            this.button_SpielStarten.Name = "button_SpielStarten";
+            this.button_SpielStarten.Size = new System.Drawing.Size(301, 58);
+            this.button_SpielStarten.TabIndex = 0;
+            this.button_SpielStarten.Text = "Spiel Starten";
+            this.button_SpielStarten.UseVisualStyleBackColor = true;
+            this.button_SpielStarten.Click += new System.EventHandler(this.button_SpielStarten_Click);
             // 
             // panel_Gegner
             // 
@@ -163,6 +164,7 @@
             this.button_DeckWählen.Size = new System.Drawing.Size(92, 29);
             this.button_DeckWählen.TabIndex = 1;
             this.button_DeckWählen.UseVisualStyleBackColor = true;
+            this.button_DeckWählen.Click += new System.EventHandler(this.button_DeckWählen_Click);
             // 
             // label_Deck
             // 
@@ -225,12 +227,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(335, 469);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_Decks);
             this.Controls.Add(this.panel_Gegner);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_SpielStarten);
             this.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(8);
             this.MaximizeBox = false;
@@ -250,7 +254,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_SpielStarten;
         private System.Windows.Forms.Panel panel_Gegner;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label_Gegnerzahl;
