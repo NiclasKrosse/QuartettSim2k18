@@ -63,10 +63,10 @@ namespace QuartettSim2k18
         //}
 
 
-        public void ExportXml(DeckStructure deckStructure,String exportPath)
+        public void ExportXml(DeckStructure deckStructure,String exportPath, String fileName)
         {
             XmlSerializer mySerializer = new XmlSerializer(typeof(DeckStructure));
-            TextWriter myTextWriter = new StreamWriter("test.xml");
+            TextWriter myTextWriter = new StreamWriter(exportPath + @"\" + fileName);
             mySerializer.Serialize(myTextWriter,myDeckStructure);
             myTextWriter.Close();
         }
