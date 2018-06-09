@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,8 +52,6 @@ namespace QuartettSim2k18
         private string mDeckPath;
 
         private DeckAssistant myDeckAssistant;
-        private List<string> mPropertyNames = new List<string>();
-
 
         private void label_NewDeck_Click(object sender, EventArgs e)
         {
@@ -379,10 +378,10 @@ namespace QuartettSim2k18
                 {
 
                     DeckStructure.CardProperties myCardProperties = new DeckStructure.CardProperties();
-                    myCardProperties.propertyName = mPropertyTextBoxList.ElementAt(i -1).Text;
-                    myCardProperties.propertyDisplayValue = mPropertyDisplayValueTextBoxList.ElementAt(i -1 ).Text;
-                    myCardProperties.propertyValue = double.Parse(mPropertyValueTextBoxList.ElementAt(i -1).Text);
-                    myCardProperties.greaterIsBetter = mCheckButtonsList.ElementAt(i -1).Checked;
+                    myCardProperties.propertyName = mPropertyTextBoxList.ElementAt(i - 1).Text;
+                    myCardProperties.propertyDisplayValue = mPropertyDisplayValueTextBoxList.ElementAt(i - 1).Text;
+                    myCardProperties.propertyValue = double.Parse(mPropertyValueTextBoxList.ElementAt(i - 1).Text);
+                    myCardProperties.greaterIsBetter = mCheckButtonsList.ElementAt(i - 1).Checked;
                     nCardProperties.Add(myCardProperties);
                 }
 
@@ -400,7 +399,7 @@ namespace QuartettSim2k18
             }
             return nResult;
         }
-        #endregion
+
 
         private void button_NextQuartett_Click(object sender, EventArgs e)
         {
@@ -428,8 +427,45 @@ namespace QuartettSim2k18
                 button_NextCard.Enabled = true;
 
                 //todo Wenn gewünschte Anzahl an Quartetten erreicht ist, dann Wandle diesen Button in einen "Abschließen Button um"
+                if (mQuartetts.Count == (mQuartettAmount - 1))
+                {
+                    button_NextQuartett.Text = "Abschliessen";
+                }
+
+                if (mQuartetts.Count == mQuartettAmount)
+                {
+                    ExportDeck();
+                }
             }
 
         }
+
+        private void ExportDeck()
+        {
+            string nExportPath = mDeckPath + @"\" + mDeckName;
+            //Quartette übergeben
+            myDeckAssistant.myDeckStructure.deckName = mDeckName;
+            myDeckAssistant.myDeckStructure.listOfQuartetts = mQuartetts;
+
+            //Ordner anlegen todo Wenn das nicht geht, anderen Pfad anbieten
+            try
+            {
+                if (!Directory.Exists(nExportPath))
+                {
+                    Directory.CreateDirectory(nExportPath);
+                }
+
+                myDeckAssistant.ExportXml(myDeckAssistant.myDeckStructure,nExportPath,mDeckName);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
+        }
+
+        #endregion
     }
 }
