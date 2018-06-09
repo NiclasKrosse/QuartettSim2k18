@@ -5,6 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace QuartettSim2k18
@@ -13,62 +15,36 @@ namespace QuartettSim2k18
     {
         public DeckStructure myDeckStructure;
 
-
-        //public void SetDeckStructure()
-        //{
-        //    myDeckStructure = new DeckStructure();
-        //    //Testdaten
-        //    //todo 8 Quartetts //jeweils 4 Karten , das überprüfen
-        //    myDeckStructure.deckName = "Testdeck";
-
-        //    DeckStructure.Quartett myQuartett = new DeckStructure.Quartett();
-        //    DeckStructure.QuartettCard myCard_1 = new DeckStructure.QuartettCard();
-        //    DeckStructure.CardProperties myCardProperties = new DeckStructure.CardProperties();
-
-        //    //Anzahl der Eigenschaften kann in der Ersetllungsmaske festgelegt werden
-        //    //Alles ausser der Wert soll nur einmal gesetzt werden
-        //    myCard_1.cardProperties = new List<DeckStructure.CardProperties>();
-        //    myDeckStructure.listOfQuartetts = new List<DeckStructure.Quartett>();
-        //    myQuartett.Cards = new List<DeckStructure.QuartettCard>();
-
-        //    myCardProperties.propertyName = "Verbrauch: ";
-        //    myCardProperties.greaterIsBetter = false;
-        //    myCardProperties.propertyDisplayValue = "8 l/100km";
-        //    myCardProperties.propertyValue = 8;
-        //    myCard_1.cardProperties.Add(myCardProperties);
-
-        //    myCardProperties.propertyName = "Leistung: ";
-        //    myCardProperties.greaterIsBetter = true;
-        //    myCardProperties.propertyDisplayValue = "160 PS";
-        //    myCardProperties.propertyValue = 160;
-        //    myCard_1.cardProperties.Add(myCardProperties);
-
-        //    myCardProperties.propertyName = "Türen: ";
-        //    myCardProperties.greaterIsBetter = true;
-        //    myCardProperties.propertyDisplayValue = "5 Türen";
-        //    myCardProperties.propertyValue = 5;
-        //    myCard_1.cardProperties.Add(myCardProperties);
-
-        //    myCardProperties.propertyName = "Gewicht: ";
-        //    myCardProperties.greaterIsBetter = false;
-        //    myCardProperties.propertyDisplayValue = "1600 kg";
-        //    myCardProperties.propertyValue = 1600;
-        //    myCard_1.cardProperties.Add(myCardProperties);
-
-        //    myQuartett.Cards.Add(myCard_1);
-
-        //    myDeckStructure.listOfQuartetts.Add(myQuartett);
-
-        //    ExportXml(myDeckStructure);
-        //}
-
-
+        
         public void ExportXml(DeckStructure deckStructure,String exportPath, String fileName)
         {
             XmlSerializer mySerializer = new XmlSerializer(typeof(DeckStructure));
             TextWriter myTextWriter = new StreamWriter(exportPath + @"\" + fileName);
             mySerializer.Serialize(myTextWriter,myDeckStructure);
             myTextWriter.Close();
+        }
+
+        public DeckStructure DeserializeDeck(string filename)
+        {
+            DeckStructure nDeckStructure = new DeckStructure();
+            try
+            {                
+                XmlSerializer mySerializer = new XmlSerializer(typeof(DeckStructure));
+
+                FileStream myFileStream = new FileStream(filename, FileMode.Open);
+                XmlReader myReader = XmlReader.Create(myFileStream);
+
+                nDeckStructure = (DeckStructure)mySerializer.Deserialize(myReader);
+                myFileStream.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                MessageBox.Show("Fehler bei der Deserialisierung");
+            }
+            
+
+            return nDeckStructure;
         }
     }
 

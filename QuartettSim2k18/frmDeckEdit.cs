@@ -455,7 +455,9 @@ namespace QuartettSim2k18
                     Directory.CreateDirectory(nExportPath);
                 }
 
-                myDeckAssistant.ExportXml(myDeckAssistant.myDeckStructure,nExportPath,mDeckName);
+                //todo Bilder in eigenen Ordner kopieren
+
+                myDeckAssistant.ExportXml(myDeckAssistant.myDeckStructure,nExportPath,mDeckName + ".xml");
 
             }
             catch (Exception e)
@@ -465,6 +467,7 @@ namespace QuartettSim2k18
             }
 
         }
+
 
         #endregion
     }

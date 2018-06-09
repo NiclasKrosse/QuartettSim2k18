@@ -59,6 +59,12 @@
     <Compile Include="frmDeckEdit.Designer.cs">
       <DependentUpon>frmDeckEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGameplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGameplay.Designer.cs">
+      <DependentUpon>frmGameplay.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
