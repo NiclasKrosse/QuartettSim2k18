@@ -201,7 +201,7 @@ namespace QuartettSim2k18
         List<TextBox> mPropertyValueTextBoxList = new List<TextBox>();
         List<TextBox> mPropertyDisplayValueTextBoxList = new List<TextBox>();
 
-        List<CheckButton> mCheckButtonsList = new List<CheckButton>();
+        List<CheckBox> mCheckBoxList = new List<CheckBox>();
 
         private void FillPanelList()
         {
@@ -223,12 +223,12 @@ namespace QuartettSim2k18
             mPropertyTextBoxList.Add(textBox_Eigenschaft5);
             mPropertyTextBoxList.Add(textBox_Eigenschaft6);
 
-            mCheckButtonsList.Add(checkButton_BiB);
-            mCheckButtonsList.Add(checkButton_BiB1);
-            mCheckButtonsList.Add(checkButton_BiB3);
-            mCheckButtonsList.Add(checkButton_BiB4);
-            mCheckButtonsList.Add(checkButton_BiB5);
-            mCheckButtonsList.Add(checkButton_BiB6);
+            mCheckBoxList.Add(checkBox1);
+            mCheckBoxList.Add(checkBox2);
+            mCheckBoxList.Add(checkBox3);
+            mCheckBoxList.Add(checkBox4);
+            mCheckBoxList.Add(checkBox5);
+            mCheckBoxList.Add(checkBox6);
 
             //Page 3
             mPropertyLabelList.Add(label_P1);
@@ -381,7 +381,7 @@ namespace QuartettSim2k18
                     myCardProperties.propertyName = mPropertyTextBoxList.ElementAt(i - 1).Text;
                     myCardProperties.propertyDisplayValue = mPropertyDisplayValueTextBoxList.ElementAt(i - 1).Text;
                     myCardProperties.propertyValue = double.Parse(mPropertyValueTextBoxList.ElementAt(i - 1).Text);
-                    myCardProperties.greaterIsBetter = mCheckButtonsList.ElementAt(i - 1).Checked;
+                    myCardProperties.greaterIsBetter = mCheckBoxList.ElementAt(i - 1).Checked;
                     nCardProperties.Add(myCardProperties);
                 }
 

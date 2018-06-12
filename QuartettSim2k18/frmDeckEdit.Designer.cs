@@ -67,27 +67,21 @@
             this.label_Quartettname = new System.Windows.Forms.Label();
             this.panel_QuartettDef = new System.Windows.Forms.Panel();
             this.panel_Eigenschaft6 = new System.Windows.Forms.Panel();
-            this.checkButton_BiB6 = new DevExpress.XtraEditors.CheckButton();
             this.textBox_Eigenschaft6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel_Eigenschaft5 = new System.Windows.Forms.Panel();
-            this.checkButton_BiB5 = new DevExpress.XtraEditors.CheckButton();
             this.textBox_Eigenschaft5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel_Eigenschaft4 = new System.Windows.Forms.Panel();
-            this.checkButton_BiB4 = new DevExpress.XtraEditors.CheckButton();
             this.textBox_Eigenschaft4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel_Eigenschaft3 = new System.Windows.Forms.Panel();
-            this.checkButton_BiB3 = new DevExpress.XtraEditors.CheckButton();
             this.textBox_Eigenschaft3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel_Eigenschaft2 = new System.Windows.Forms.Panel();
-            this.checkButton_BiB = new DevExpress.XtraEditors.CheckButton();
             this.textBox_Eigenschaft2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_Eigenschaft1 = new System.Windows.Forms.Panel();
-            this.checkButton_BiB1 = new DevExpress.XtraEditors.CheckButton();
             this.textBox_Eigenschaft1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label_Karten = new System.Windows.Forms.Label();
@@ -105,6 +99,18 @@
             this.textBox_DeckName = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog_Speicherort = new System.Windows.Forms.FolderBrowserDialog();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.panel_Controls.SuspendLayout();
             this.panel_NewQuartett.SuspendLayout();
             this.panel_KartenDef.SuspendLayout();
@@ -170,8 +176,8 @@
             // panel_NewQuartett
             // 
             this.panel_NewQuartett.Controls.Add(this.label_Caption);
-            this.panel_NewQuartett.Controls.Add(this.panel_KartenDef);
             this.panel_NewQuartett.Controls.Add(this.panel_QuartettDef);
+            this.panel_NewQuartett.Controls.Add(this.panel_KartenDef);
             this.panel_NewQuartett.Controls.Add(this.panel_Eigenschaften);
             this.panel_NewQuartett.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_NewQuartett.Location = new System.Drawing.Point(0, 0);
@@ -540,7 +546,8 @@
             // 
             // panel_Eigenschaft6
             // 
-            this.panel_Eigenschaft6.Controls.Add(this.checkButton_BiB6);
+            this.panel_Eigenschaft6.Controls.Add(this.label12);
+            this.panel_Eigenschaft6.Controls.Add(this.checkBox6);
             this.panel_Eigenschaft6.Controls.Add(this.textBox_Eigenschaft6);
             this.panel_Eigenschaft6.Controls.Add(this.label6);
             this.panel_Eigenschaft6.Location = new System.Drawing.Point(17, 268);
@@ -548,27 +555,6 @@
             this.panel_Eigenschaft6.Size = new System.Drawing.Size(491, 38);
             this.panel_Eigenschaft6.TabIndex = 7;
             this.panel_Eigenschaft6.Tag = "6";
-            // 
-            // checkButton_BiB6
-            // 
-            this.checkButton_BiB6.AppearancePressed.BackColor = System.Drawing.Color.DarkMagenta;
-            this.checkButton_BiB6.AppearancePressed.ForeColor = System.Drawing.Color.White;
-            this.checkButton_BiB6.AppearancePressed.Options.UseBackColor = true;
-            this.checkButton_BiB6.AppearancePressed.Options.UseForeColor = true;
-            this.checkButton_BiB6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.checkButton_BiB6.Checked = true;
-            this.checkButton_BiB6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkButton_BiB6.Location = new System.Drawing.Point(392, 0);
-            this.checkButton_BiB6.Name = "checkButton_BiB6";
-            this.checkButton_BiB6.Size = new System.Drawing.Size(96, 38);
-            this.checkButton_BiB6.TabIndex = 3;
-            this.checkButton_BiB6.Tag = "6";
-            this.checkButton_BiB6.Text = "Größer ist besser";
-            this.checkButton_BiB6.ToolTip = "Wenn dieses Element gesetzt ist, dann gewinnt bei einem Vergleich dieser Eigensch" +
-    "aft\r\nimmer derjenige mit dem größeren Wert.\r\nDas wäre zum Beispiel beim Autoquar" +
-    "tett bei der Fahrzeugleistung der Fall.";
-            this.checkButton_BiB6.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
-            this.checkButton_BiB6.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
             // textBox_Eigenschaft6
             // 
@@ -592,7 +578,8 @@
             // 
             // panel_Eigenschaft5
             // 
-            this.panel_Eigenschaft5.Controls.Add(this.checkButton_BiB5);
+            this.panel_Eigenschaft5.Controls.Add(this.label11);
+            this.panel_Eigenschaft5.Controls.Add(this.checkBox5);
             this.panel_Eigenschaft5.Controls.Add(this.textBox_Eigenschaft5);
             this.panel_Eigenschaft5.Controls.Add(this.label5);
             this.panel_Eigenschaft5.Location = new System.Drawing.Point(17, 224);
@@ -600,27 +587,6 @@
             this.panel_Eigenschaft5.Size = new System.Drawing.Size(491, 38);
             this.panel_Eigenschaft5.TabIndex = 7;
             this.panel_Eigenschaft5.Tag = "5";
-            // 
-            // checkButton_BiB5
-            // 
-            this.checkButton_BiB5.AppearancePressed.BackColor = System.Drawing.Color.DarkMagenta;
-            this.checkButton_BiB5.AppearancePressed.ForeColor = System.Drawing.Color.White;
-            this.checkButton_BiB5.AppearancePressed.Options.UseBackColor = true;
-            this.checkButton_BiB5.AppearancePressed.Options.UseForeColor = true;
-            this.checkButton_BiB5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.checkButton_BiB5.Checked = true;
-            this.checkButton_BiB5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkButton_BiB5.Location = new System.Drawing.Point(392, 0);
-            this.checkButton_BiB5.Name = "checkButton_BiB5";
-            this.checkButton_BiB5.Size = new System.Drawing.Size(96, 38);
-            this.checkButton_BiB5.TabIndex = 3;
-            this.checkButton_BiB5.Tag = "5";
-            this.checkButton_BiB5.Text = "Größer ist besser";
-            this.checkButton_BiB5.ToolTip = "Wenn dieses Element gesetzt ist, dann gewinnt bei einem Vergleich dieser Eigensch" +
-    "aft\r\nimmer derjenige mit dem größeren Wert.\r\nDas wäre zum Beispiel beim Autoquar" +
-    "tett bei der Fahrzeugleistung der Fall.";
-            this.checkButton_BiB5.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
-            this.checkButton_BiB5.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
             // textBox_Eigenschaft5
             // 
@@ -645,7 +611,8 @@
             // 
             // panel_Eigenschaft4
             // 
-            this.panel_Eigenschaft4.Controls.Add(this.checkButton_BiB4);
+            this.panel_Eigenschaft4.Controls.Add(this.label10);
+            this.panel_Eigenschaft4.Controls.Add(this.checkBox4);
             this.panel_Eigenschaft4.Controls.Add(this.textBox_Eigenschaft4);
             this.panel_Eigenschaft4.Controls.Add(this.label4);
             this.panel_Eigenschaft4.Location = new System.Drawing.Point(17, 180);
@@ -653,27 +620,6 @@
             this.panel_Eigenschaft4.Size = new System.Drawing.Size(491, 38);
             this.panel_Eigenschaft4.TabIndex = 6;
             this.panel_Eigenschaft4.Tag = "4";
-            // 
-            // checkButton_BiB4
-            // 
-            this.checkButton_BiB4.AppearancePressed.BackColor = System.Drawing.Color.DarkMagenta;
-            this.checkButton_BiB4.AppearancePressed.ForeColor = System.Drawing.Color.White;
-            this.checkButton_BiB4.AppearancePressed.Options.UseBackColor = true;
-            this.checkButton_BiB4.AppearancePressed.Options.UseForeColor = true;
-            this.checkButton_BiB4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.checkButton_BiB4.Checked = true;
-            this.checkButton_BiB4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkButton_BiB4.Location = new System.Drawing.Point(392, 0);
-            this.checkButton_BiB4.Name = "checkButton_BiB4";
-            this.checkButton_BiB4.Size = new System.Drawing.Size(96, 38);
-            this.checkButton_BiB4.TabIndex = 3;
-            this.checkButton_BiB4.Tag = "4";
-            this.checkButton_BiB4.Text = "Größer ist besser";
-            this.checkButton_BiB4.ToolTip = "Wenn dieses Element gesetzt ist, dann gewinnt bei einem Vergleich dieser Eigensch" +
-    "aft\r\nimmer derjenige mit dem größeren Wert.\r\nDas wäre zum Beispiel beim Autoquar" +
-    "tett bei der Fahrzeugleistung der Fall.";
-            this.checkButton_BiB4.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
-            this.checkButton_BiB4.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
             // textBox_Eigenschaft4
             // 
@@ -697,7 +643,8 @@
             // 
             // panel_Eigenschaft3
             // 
-            this.panel_Eigenschaft3.Controls.Add(this.checkButton_BiB3);
+            this.panel_Eigenschaft3.Controls.Add(this.label9);
+            this.panel_Eigenschaft3.Controls.Add(this.checkBox3);
             this.panel_Eigenschaft3.Controls.Add(this.textBox_Eigenschaft3);
             this.panel_Eigenschaft3.Controls.Add(this.label3);
             this.panel_Eigenschaft3.Location = new System.Drawing.Point(17, 136);
@@ -705,27 +652,6 @@
             this.panel_Eigenschaft3.Size = new System.Drawing.Size(491, 38);
             this.panel_Eigenschaft3.TabIndex = 5;
             this.panel_Eigenschaft3.Tag = "3";
-            // 
-            // checkButton_BiB3
-            // 
-            this.checkButton_BiB3.AppearancePressed.BackColor = System.Drawing.Color.DarkMagenta;
-            this.checkButton_BiB3.AppearancePressed.ForeColor = System.Drawing.Color.White;
-            this.checkButton_BiB3.AppearancePressed.Options.UseBackColor = true;
-            this.checkButton_BiB3.AppearancePressed.Options.UseForeColor = true;
-            this.checkButton_BiB3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.checkButton_BiB3.Checked = true;
-            this.checkButton_BiB3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkButton_BiB3.Location = new System.Drawing.Point(392, 0);
-            this.checkButton_BiB3.Name = "checkButton_BiB3";
-            this.checkButton_BiB3.Size = new System.Drawing.Size(96, 38);
-            this.checkButton_BiB3.TabIndex = 3;
-            this.checkButton_BiB3.Tag = "3";
-            this.checkButton_BiB3.Text = "Größer ist besser";
-            this.checkButton_BiB3.ToolTip = "Wenn dieses Element gesetzt ist, dann gewinnt bei einem Vergleich dieser Eigensch" +
-    "aft\r\nimmer derjenige mit dem größeren Wert.\r\nDas wäre zum Beispiel beim Autoquar" +
-    "tett bei der Fahrzeugleistung der Fall.";
-            this.checkButton_BiB3.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
-            this.checkButton_BiB3.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
             // textBox_Eigenschaft3
             // 
@@ -749,7 +675,8 @@
             // 
             // panel_Eigenschaft2
             // 
-            this.panel_Eigenschaft2.Controls.Add(this.checkButton_BiB);
+            this.panel_Eigenschaft2.Controls.Add(this.label8);
+            this.panel_Eigenschaft2.Controls.Add(this.checkBox2);
             this.panel_Eigenschaft2.Controls.Add(this.textBox_Eigenschaft2);
             this.panel_Eigenschaft2.Controls.Add(this.label1);
             this.panel_Eigenschaft2.Location = new System.Drawing.Point(17, 92);
@@ -757,27 +684,6 @@
             this.panel_Eigenschaft2.Size = new System.Drawing.Size(491, 38);
             this.panel_Eigenschaft2.TabIndex = 4;
             this.panel_Eigenschaft2.Tag = "2";
-            // 
-            // checkButton_BiB
-            // 
-            this.checkButton_BiB.AppearancePressed.BackColor = System.Drawing.Color.DarkMagenta;
-            this.checkButton_BiB.AppearancePressed.ForeColor = System.Drawing.Color.White;
-            this.checkButton_BiB.AppearancePressed.Options.UseBackColor = true;
-            this.checkButton_BiB.AppearancePressed.Options.UseForeColor = true;
-            this.checkButton_BiB.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.checkButton_BiB.Checked = true;
-            this.checkButton_BiB.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkButton_BiB.Location = new System.Drawing.Point(392, 0);
-            this.checkButton_BiB.Name = "checkButton_BiB";
-            this.checkButton_BiB.Size = new System.Drawing.Size(96, 38);
-            this.checkButton_BiB.TabIndex = 2;
-            this.checkButton_BiB.Tag = "2";
-            this.checkButton_BiB.Text = "Größer ist besser";
-            this.checkButton_BiB.ToolTip = "Wenn dieses Element gesetzt ist, dann gewinnt bei einem Vergleich dieser Eigensch" +
-    "aft\r\nimmer derjenige mit dem größeren Wert.\r\nDas wäre zum Beispiel beim Autoquar" +
-    "tett bei der Fahrzeugleistung der Fall.";
-            this.checkButton_BiB.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
-            this.checkButton_BiB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
             // textBox_Eigenschaft2
             // 
@@ -801,7 +707,8 @@
             // 
             // panel_Eigenschaft1
             // 
-            this.panel_Eigenschaft1.Controls.Add(this.checkButton_BiB1);
+            this.panel_Eigenschaft1.Controls.Add(this.label7);
+            this.panel_Eigenschaft1.Controls.Add(this.checkBox1);
             this.panel_Eigenschaft1.Controls.Add(this.textBox_Eigenschaft1);
             this.panel_Eigenschaft1.Controls.Add(this.label2);
             this.panel_Eigenschaft1.Location = new System.Drawing.Point(17, 48);
@@ -809,27 +716,6 @@
             this.panel_Eigenschaft1.Size = new System.Drawing.Size(491, 38);
             this.panel_Eigenschaft1.TabIndex = 3;
             this.panel_Eigenschaft1.Tag = "1";
-            // 
-            // checkButton_BiB1
-            // 
-            this.checkButton_BiB1.AppearancePressed.BackColor = System.Drawing.Color.DarkMagenta;
-            this.checkButton_BiB1.AppearancePressed.ForeColor = System.Drawing.Color.White;
-            this.checkButton_BiB1.AppearancePressed.Options.UseBackColor = true;
-            this.checkButton_BiB1.AppearancePressed.Options.UseForeColor = true;
-            this.checkButton_BiB1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.checkButton_BiB1.Checked = true;
-            this.checkButton_BiB1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkButton_BiB1.Location = new System.Drawing.Point(392, 0);
-            this.checkButton_BiB1.Name = "checkButton_BiB1";
-            this.checkButton_BiB1.Size = new System.Drawing.Size(96, 38);
-            this.checkButton_BiB1.TabIndex = 3;
-            this.checkButton_BiB1.Tag = "1";
-            this.checkButton_BiB1.Text = "Größer ist besser";
-            this.checkButton_BiB1.ToolTip = "Wenn dieses Element gesetzt ist, dann gewinnt bei einem Vergleich dieser Eigensch" +
-    "aft\r\nimmer derjenige mit dem größeren Wert.\r\nDas wäre zum Beispiel beim Autoquar" +
-    "tett bei der Fahrzeugleistung der Fall.";
-            this.checkButton_BiB1.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
-            this.checkButton_BiB1.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
             // textBox_Eigenschaft1
             // 
@@ -1013,6 +899,156 @@
             this.textBox_DeckName.Size = new System.Drawing.Size(333, 43);
             this.textBox_DeckName.TabIndex = 1;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(392, 0);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(20, 38);
+            this.checkBox1.TabIndex = 2;
+            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(412, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 38);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Größer ist besser";
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(412, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 38);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Größer ist besser";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(392, 0);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(20, 38);
+            this.checkBox2.TabIndex = 4;
+            this.checkBox2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(412, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 38);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Größer ist besser";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(392, 0);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(20, 38);
+            this.checkBox3.TabIndex = 4;
+            this.checkBox3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(412, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 38);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Größer ist besser";
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox4.Location = new System.Drawing.Point(392, 0);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(20, 38);
+            this.checkBox4.TabIndex = 4;
+            this.checkBox4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(412, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(80, 38);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Größer ist besser";
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.Checked = true;
+            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox5.Location = new System.Drawing.Point(392, 0);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(20, 38);
+            this.checkBox5.TabIndex = 4;
+            this.checkBox5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(412, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(80, 38);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Größer ist besser";
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.Checked = true;
+            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox6.Location = new System.Drawing.Point(392, 0);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(20, 38);
+            this.checkBox6.TabIndex = 4;
+            this.checkBox6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
             // frmDeckEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
@@ -1098,12 +1134,6 @@
         private System.Windows.Forms.Panel panel_Eigenschaft5;
         private System.Windows.Forms.TextBox textBox_Eigenschaft5;
         private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.CheckButton checkButton_BiB;
-        private DevExpress.XtraEditors.CheckButton checkButton_BiB6;
-        private DevExpress.XtraEditors.CheckButton checkButton_BiB5;
-        private DevExpress.XtraEditors.CheckButton checkButton_BiB4;
-        private DevExpress.XtraEditors.CheckButton checkButton_BiB3;
-        private DevExpress.XtraEditors.CheckButton checkButton_BiB1;
         private System.Windows.Forms.Panel panel_KartenDef;
         private System.Windows.Forms.Label label_Zwischenspeichern;
         private System.Windows.Forms.Panel panel_Karteninfos;
@@ -1135,5 +1165,17 @@
         private System.Windows.Forms.PictureBox pictureBox_Image;
         private System.Windows.Forms.Button button_NextCard;
         private System.Windows.Forms.TextBox textBox_CardName;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
