@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace QuartettSim2k18
 {
+    //Author: Niclas Krosse
     public partial class frmDeckEdit : Form
     {
         public frmDeckEdit()
@@ -451,13 +452,23 @@ namespace QuartettSim2k18
 
                 //todo Bilder in eigenen Ordner kopieren
 
-                myDeckAssistant.ExportXml(myDeckAssistant.myDeckStructure,nExportPath,mDeckName + ".xml");
+                myDeckAssistant.ExportXml(myDeckAssistant.myDeckStructure, nExportPath, mDeckName + ".xml");
 
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                if (MessageBox.Show("Export des Decks nicht möglich!\nVersuchen Sie es bitte erneut mit anderem Pfad",
+                        "Fehler", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.OK)
+                {
+                    OpenFileDialog nOpenFileDialog = new OpenFileDialog();
+                    nOpenFileDialog.ShowDialog();
+                    mDeckPath = nOpenFileDialog.FileName;
+                }
+
+            }
+            finally
+            {
+                this.Close();
             }
 
         }

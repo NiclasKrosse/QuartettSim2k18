@@ -200,6 +200,7 @@
             this.radioButton_QuartettAnzahl.TabStop = true;
             this.radioButton_QuartettAnzahl.Text = "4 Quartett";
             this.radioButton_QuartettAnzahl.UseVisualStyleBackColor = true;
+            this.radioButton_QuartettAnzahl.Visible = false;
             // 
             // radioButton_LastManStanding
             // 
@@ -211,6 +212,7 @@
             this.radioButton_LastManStanding.TabStop = true;
             this.radioButton_LastManStanding.Text = "Last man standing";
             this.radioButton_LastManStanding.UseVisualStyleBackColor = true;
+            this.radioButton_LastManStanding.Visible = false;
             // 
             // radioButton_Zeit
             // 
@@ -222,6 +224,7 @@
             this.radioButton_Zeit.TabStop = true;
             this.radioButton_Zeit.Text = "Auf Zeit";
             this.radioButton_Zeit.UseVisualStyleBackColor = true;
+            this.radioButton_Zeit.Visible = false;
             // 
             // frmPreperation
             // 
