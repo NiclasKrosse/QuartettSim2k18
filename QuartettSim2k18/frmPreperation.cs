@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace QuartettSim2k18
 {
+    //Author Niclas Krosse
     public partial class frmPreperation : Form
     {
         public frmPreperation()
@@ -30,6 +31,8 @@ namespace QuartettSim2k18
             DeckAssistant myDeckAssistant = new DeckAssistant();
             openFileDialog1.ShowDialog();
             myDeckStructure = myDeckAssistant.DeserializeDeck(openFileDialog1.FileName);
+            label_GewähltesDeck.Text = myDeckStructure.deckName;
+            label_GewähltesDeck.Visible = true;
             //todo Liste mit den Zuletzt ausgewählten Decks erstellen.
         }
 
