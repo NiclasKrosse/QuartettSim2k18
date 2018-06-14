@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace QuartettSim2k18
 {
+    //Author Niclas Krosse
     public partial class frmMain : Form
     {
         public frmMain()

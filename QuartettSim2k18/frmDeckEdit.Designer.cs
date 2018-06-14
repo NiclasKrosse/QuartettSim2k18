@@ -34,6 +34,39 @@
             this.label_NewDeck = new System.Windows.Forms.Label();
             this.panel_NewQuartett = new System.Windows.Forms.Panel();
             this.label_Caption = new System.Windows.Forms.Label();
+            this.panel_QuartettDef = new System.Windows.Forms.Panel();
+            this.panel_Eigenschaft6 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.textBox_Eigenschaft6 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel_Eigenschaft5 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.textBox_Eigenschaft5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel_Eigenschaft4 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.textBox_Eigenschaft4 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel_Eigenschaft3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.textBox_Eigenschaft3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel_Eigenschaft2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.textBox_Eigenschaft2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel_Eigenschaft1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox_Eigenschaft1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label_Karten = new System.Windows.Forms.Label();
+            this.label_Deckeigenschaften = new System.Windows.Forms.Label();
             this.panel_KartenDef = new System.Windows.Forms.Panel();
             this.label_QuartettDef = new System.Windows.Forms.Label();
             this.label_Zwischenspeichern = new System.Windows.Forms.Label();
@@ -65,27 +98,6 @@
             this.button_NextQuartett = new System.Windows.Forms.Button();
             this.textBox_Quartettname = new System.Windows.Forms.TextBox();
             this.label_Quartettname = new System.Windows.Forms.Label();
-            this.panel_QuartettDef = new System.Windows.Forms.Panel();
-            this.panel_Eigenschaft6 = new System.Windows.Forms.Panel();
-            this.textBox_Eigenschaft6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel_Eigenschaft5 = new System.Windows.Forms.Panel();
-            this.textBox_Eigenschaft5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel_Eigenschaft4 = new System.Windows.Forms.Panel();
-            this.textBox_Eigenschaft4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel_Eigenschaft3 = new System.Windows.Forms.Panel();
-            this.textBox_Eigenschaft3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel_Eigenschaft2 = new System.Windows.Forms.Panel();
-            this.textBox_Eigenschaft2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel_Eigenschaft1 = new System.Windows.Forms.Panel();
-            this.textBox_Eigenschaft1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label_Karten = new System.Windows.Forms.Label();
-            this.label_Deckeigenschaften = new System.Windows.Forms.Label();
             this.panel_Eigenschaften = new System.Windows.Forms.Panel();
             this.label_QuartetteDefinieren = new System.Windows.Forms.Label();
             this.label_SpeicherortWählen = new System.Windows.Forms.Label();
@@ -99,24 +111,8 @@
             this.textBox_DeckName = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog_Speicherort = new System.Windows.Forms.FolderBrowserDialog();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.panel_Controls.SuspendLayout();
             this.panel_NewQuartett.SuspendLayout();
-            this.panel_KartenDef.SuspendLayout();
-            this.panel_Karteninfos.SuspendLayout();
-            this.panel_KartenInhalte.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).BeginInit();
             this.panel_QuartettDef.SuspendLayout();
             this.panel_Eigenschaft6.SuspendLayout();
             this.panel_Eigenschaft5.SuspendLayout();
@@ -124,6 +120,10 @@
             this.panel_Eigenschaft3.SuspendLayout();
             this.panel_Eigenschaft2.SuspendLayout();
             this.panel_Eigenschaft1.SuspendLayout();
+            this.panel_KartenDef.SuspendLayout();
+            this.panel_Karteninfos.SuspendLayout();
+            this.panel_KartenInhalte.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).BeginInit();
             this.panel_Eigenschaften.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnzahlQuartetts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnzahlEiggenschaften)).BeginInit();
@@ -197,6 +197,394 @@
             this.label_Caption.TabIndex = 2;
             this.label_Caption.Text = "Deckeigenschaften";
             this.label_Caption.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel_QuartettDef
+            // 
+            this.panel_QuartettDef.Controls.Add(this.panel_Eigenschaft6);
+            this.panel_QuartettDef.Controls.Add(this.panel_Eigenschaft5);
+            this.panel_QuartettDef.Controls.Add(this.panel_Eigenschaft4);
+            this.panel_QuartettDef.Controls.Add(this.panel_Eigenschaft3);
+            this.panel_QuartettDef.Controls.Add(this.panel_Eigenschaft2);
+            this.panel_QuartettDef.Controls.Add(this.panel_Eigenschaft1);
+            this.panel_QuartettDef.Controls.Add(this.label_Karten);
+            this.panel_QuartettDef.Controls.Add(this.label_Deckeigenschaften);
+            this.panel_QuartettDef.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_QuartettDef.Location = new System.Drawing.Point(0, 0);
+            this.panel_QuartettDef.Name = "panel_QuartettDef";
+            this.panel_QuartettDef.Size = new System.Drawing.Size(521, 400);
+            this.panel_QuartettDef.TabIndex = 11;
+            this.panel_QuartettDef.Tag = "2";
+            this.panel_QuartettDef.Visible = false;
+            this.panel_QuartettDef.VisibleChanged += new System.EventHandler(this.panel_QuartettDef_VisibleChanged);
+            // 
+            // panel_Eigenschaft6
+            // 
+            this.panel_Eigenschaft6.Controls.Add(this.label12);
+            this.panel_Eigenschaft6.Controls.Add(this.checkBox6);
+            this.panel_Eigenschaft6.Controls.Add(this.textBox_Eigenschaft6);
+            this.panel_Eigenschaft6.Controls.Add(this.label6);
+            this.panel_Eigenschaft6.Location = new System.Drawing.Point(17, 268);
+            this.panel_Eigenschaft6.Name = "panel_Eigenschaft6";
+            this.panel_Eigenschaft6.Size = new System.Drawing.Size(491, 38);
+            this.panel_Eigenschaft6.TabIndex = 7;
+            this.panel_Eigenschaft6.Tag = "6";
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(412, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(80, 38);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Größer ist besser";
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.Checked = true;
+            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox6.Location = new System.Drawing.Point(392, 0);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(20, 38);
+            this.checkBox6.TabIndex = 4;
+            this.checkBox6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Eigenschaft6
+            // 
+            this.textBox_Eigenschaft6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox_Eigenschaft6.Location = new System.Drawing.Point(180, 0);
+            this.textBox_Eigenschaft6.Name = "textBox_Eigenschaft6";
+            this.textBox_Eigenschaft6.Size = new System.Drawing.Size(212, 43);
+            this.textBox_Eigenschaft6.TabIndex = 1;
+            this.textBox_Eigenschaft6.Tag = "6";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(180, 37);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Eigenschaft 6:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel_Eigenschaft5
+            // 
+            this.panel_Eigenschaft5.Controls.Add(this.label11);
+            this.panel_Eigenschaft5.Controls.Add(this.checkBox5);
+            this.panel_Eigenschaft5.Controls.Add(this.textBox_Eigenschaft5);
+            this.panel_Eigenschaft5.Controls.Add(this.label5);
+            this.panel_Eigenschaft5.Location = new System.Drawing.Point(17, 224);
+            this.panel_Eigenschaft5.Name = "panel_Eigenschaft5";
+            this.panel_Eigenschaft5.Size = new System.Drawing.Size(491, 38);
+            this.panel_Eigenschaft5.TabIndex = 7;
+            this.panel_Eigenschaft5.Tag = "5";
+            // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(412, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(80, 38);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Größer ist besser";
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.Checked = true;
+            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox5.Location = new System.Drawing.Point(392, 0);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(20, 38);
+            this.checkBox5.TabIndex = 4;
+            this.checkBox5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Eigenschaft5
+            // 
+            this.textBox_Eigenschaft5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox_Eigenschaft5.Location = new System.Drawing.Point(180, 0);
+            this.textBox_Eigenschaft5.Name = "textBox_Eigenschaft5";
+            this.textBox_Eigenschaft5.Size = new System.Drawing.Size(212, 43);
+            this.textBox_Eigenschaft5.TabIndex = 1;
+            this.textBox_Eigenschaft5.Tag = "5";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(180, 37);
+            this.label5.TabIndex = 0;
+            this.label5.Tag = "5";
+            this.label5.Text = "Eigenschaft 5:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel_Eigenschaft4
+            // 
+            this.panel_Eigenschaft4.Controls.Add(this.label10);
+            this.panel_Eigenschaft4.Controls.Add(this.checkBox4);
+            this.panel_Eigenschaft4.Controls.Add(this.textBox_Eigenschaft4);
+            this.panel_Eigenschaft4.Controls.Add(this.label4);
+            this.panel_Eigenschaft4.Location = new System.Drawing.Point(17, 180);
+            this.panel_Eigenschaft4.Name = "panel_Eigenschaft4";
+            this.panel_Eigenschaft4.Size = new System.Drawing.Size(491, 38);
+            this.panel_Eigenschaft4.TabIndex = 6;
+            this.panel_Eigenschaft4.Tag = "4";
+            // 
+            // label10
+            // 
+            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(412, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 38);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Größer ist besser";
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox4.Location = new System.Drawing.Point(392, 0);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(20, 38);
+            this.checkBox4.TabIndex = 4;
+            this.checkBox4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Eigenschaft4
+            // 
+            this.textBox_Eigenschaft4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox_Eigenschaft4.Location = new System.Drawing.Point(180, 0);
+            this.textBox_Eigenschaft4.Name = "textBox_Eigenschaft4";
+            this.textBox_Eigenschaft4.Size = new System.Drawing.Size(212, 43);
+            this.textBox_Eigenschaft4.TabIndex = 1;
+            this.textBox_Eigenschaft4.Tag = "4";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(180, 37);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Eigenschaft 4:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel_Eigenschaft3
+            // 
+            this.panel_Eigenschaft3.Controls.Add(this.label9);
+            this.panel_Eigenschaft3.Controls.Add(this.checkBox3);
+            this.panel_Eigenschaft3.Controls.Add(this.textBox_Eigenschaft3);
+            this.panel_Eigenschaft3.Controls.Add(this.label3);
+            this.panel_Eigenschaft3.Location = new System.Drawing.Point(17, 136);
+            this.panel_Eigenschaft3.Name = "panel_Eigenschaft3";
+            this.panel_Eigenschaft3.Size = new System.Drawing.Size(491, 38);
+            this.panel_Eigenschaft3.TabIndex = 5;
+            this.panel_Eigenschaft3.Tag = "3";
+            // 
+            // label9
+            // 
+            this.label9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(412, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 38);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Größer ist besser";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(392, 0);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(20, 38);
+            this.checkBox3.TabIndex = 4;
+            this.checkBox3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Eigenschaft3
+            // 
+            this.textBox_Eigenschaft3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox_Eigenschaft3.Location = new System.Drawing.Point(180, 0);
+            this.textBox_Eigenschaft3.Name = "textBox_Eigenschaft3";
+            this.textBox_Eigenschaft3.Size = new System.Drawing.Size(212, 43);
+            this.textBox_Eigenschaft3.TabIndex = 1;
+            this.textBox_Eigenschaft3.Tag = "3";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(180, 37);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Eigenschaft 3:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel_Eigenschaft2
+            // 
+            this.panel_Eigenschaft2.Controls.Add(this.label8);
+            this.panel_Eigenschaft2.Controls.Add(this.checkBox2);
+            this.panel_Eigenschaft2.Controls.Add(this.textBox_Eigenschaft2);
+            this.panel_Eigenschaft2.Controls.Add(this.label1);
+            this.panel_Eigenschaft2.Location = new System.Drawing.Point(17, 92);
+            this.panel_Eigenschaft2.Name = "panel_Eigenschaft2";
+            this.panel_Eigenschaft2.Size = new System.Drawing.Size(491, 38);
+            this.panel_Eigenschaft2.TabIndex = 4;
+            this.panel_Eigenschaft2.Tag = "2";
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(412, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 38);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Größer ist besser";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(392, 0);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(20, 38);
+            this.checkBox2.TabIndex = 4;
+            this.checkBox2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Eigenschaft2
+            // 
+            this.textBox_Eigenschaft2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox_Eigenschaft2.Location = new System.Drawing.Point(180, 0);
+            this.textBox_Eigenschaft2.Name = "textBox_Eigenschaft2";
+            this.textBox_Eigenschaft2.Size = new System.Drawing.Size(212, 43);
+            this.textBox_Eigenschaft2.TabIndex = 1;
+            this.textBox_Eigenschaft2.Tag = "2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 37);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Eigenschaft 2:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel_Eigenschaft1
+            // 
+            this.panel_Eigenschaft1.Controls.Add(this.label7);
+            this.panel_Eigenschaft1.Controls.Add(this.checkBox1);
+            this.panel_Eigenschaft1.Controls.Add(this.textBox_Eigenschaft1);
+            this.panel_Eigenschaft1.Controls.Add(this.label2);
+            this.panel_Eigenschaft1.Location = new System.Drawing.Point(17, 48);
+            this.panel_Eigenschaft1.Name = "panel_Eigenschaft1";
+            this.panel_Eigenschaft1.Size = new System.Drawing.Size(491, 38);
+            this.panel_Eigenschaft1.TabIndex = 3;
+            this.panel_Eigenschaft1.Tag = "1";
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(412, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 38);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Größer ist besser";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(392, 0);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(20, 38);
+            this.checkBox1.TabIndex = 2;
+            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Eigenschaft1
+            // 
+            this.textBox_Eigenschaft1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox_Eigenschaft1.Location = new System.Drawing.Point(180, 0);
+            this.textBox_Eigenschaft1.Name = "textBox_Eigenschaft1";
+            this.textBox_Eigenschaft1.Size = new System.Drawing.Size(212, 43);
+            this.textBox_Eigenschaft1.TabIndex = 1;
+            this.textBox_Eigenschaft1.Tag = "1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(180, 37);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Eigenschaft 1:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label_Karten
+            // 
+            this.label_Karten.Location = new System.Drawing.Point(283, 314);
+            this.label_Karten.Name = "label_Karten";
+            this.label_Karten.Size = new System.Drawing.Size(225, 37);
+            this.label_Karten.TabIndex = 1;
+            this.label_Karten.Tag = "3";
+            this.label_Karten.Text = "Karten def. >";
+            this.label_Karten.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Karten.Click += new System.EventHandler(this.label_QuartetteDefinieren_Click);
+            this.label_Karten.MouseLeave += new System.EventHandler(this.label_NewQuartett_MouseLeave);
+            this.label_Karten.MouseHover += new System.EventHandler(this.label_NewQuartett_MouseHover);
+            // 
+            // label_Deckeigenschaften
+            // 
+            this.label_Deckeigenschaften.Location = new System.Drawing.Point(12, 314);
+            this.label_Deckeigenschaften.Name = "label_Deckeigenschaften";
+            this.label_Deckeigenschaften.Size = new System.Drawing.Size(269, 37);
+            this.label_Deckeigenschaften.TabIndex = 0;
+            this.label_Deckeigenschaften.Tag = "1";
+            this.label_Deckeigenschaften.Text = "< Deck def.";
+            this.label_Deckeigenschaften.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_Deckeigenschaften.Click += new System.EventHandler(this.label_QuartetteDefinieren_Click);
+            this.label_Deckeigenschaften.MouseLeave += new System.EventHandler(this.label_NewQuartett_MouseLeave);
+            this.label_Deckeigenschaften.MouseHover += new System.EventHandler(this.label_NewQuartett_MouseHover);
             // 
             // panel_KartenDef
             // 
@@ -525,244 +913,6 @@
             this.label_Quartettname.TabIndex = 0;
             this.label_Quartettname.Text = "Quartettname:";
             // 
-            // panel_QuartettDef
-            // 
-            this.panel_QuartettDef.Controls.Add(this.panel_Eigenschaft6);
-            this.panel_QuartettDef.Controls.Add(this.panel_Eigenschaft5);
-            this.panel_QuartettDef.Controls.Add(this.panel_Eigenschaft4);
-            this.panel_QuartettDef.Controls.Add(this.panel_Eigenschaft3);
-            this.panel_QuartettDef.Controls.Add(this.panel_Eigenschaft2);
-            this.panel_QuartettDef.Controls.Add(this.panel_Eigenschaft1);
-            this.panel_QuartettDef.Controls.Add(this.label_Karten);
-            this.panel_QuartettDef.Controls.Add(this.label_Deckeigenschaften);
-            this.panel_QuartettDef.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_QuartettDef.Location = new System.Drawing.Point(0, 0);
-            this.panel_QuartettDef.Name = "panel_QuartettDef";
-            this.panel_QuartettDef.Size = new System.Drawing.Size(521, 400);
-            this.panel_QuartettDef.TabIndex = 11;
-            this.panel_QuartettDef.Tag = "2";
-            this.panel_QuartettDef.Visible = false;
-            this.panel_QuartettDef.VisibleChanged += new System.EventHandler(this.panel_QuartettDef_VisibleChanged);
-            // 
-            // panel_Eigenschaft6
-            // 
-            this.panel_Eigenschaft6.Controls.Add(this.label12);
-            this.panel_Eigenschaft6.Controls.Add(this.checkBox6);
-            this.panel_Eigenschaft6.Controls.Add(this.textBox_Eigenschaft6);
-            this.panel_Eigenschaft6.Controls.Add(this.label6);
-            this.panel_Eigenschaft6.Location = new System.Drawing.Point(17, 268);
-            this.panel_Eigenschaft6.Name = "panel_Eigenschaft6";
-            this.panel_Eigenschaft6.Size = new System.Drawing.Size(491, 38);
-            this.panel_Eigenschaft6.TabIndex = 7;
-            this.panel_Eigenschaft6.Tag = "6";
-            // 
-            // textBox_Eigenschaft6
-            // 
-            this.textBox_Eigenschaft6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox_Eigenschaft6.Location = new System.Drawing.Point(180, 0);
-            this.textBox_Eigenschaft6.Name = "textBox_Eigenschaft6";
-            this.textBox_Eigenschaft6.Size = new System.Drawing.Size(212, 43);
-            this.textBox_Eigenschaft6.TabIndex = 1;
-            this.textBox_Eigenschaft6.Tag = "6";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(180, 37);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Eigenschaft 6:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel_Eigenschaft5
-            // 
-            this.panel_Eigenschaft5.Controls.Add(this.label11);
-            this.panel_Eigenschaft5.Controls.Add(this.checkBox5);
-            this.panel_Eigenschaft5.Controls.Add(this.textBox_Eigenschaft5);
-            this.panel_Eigenschaft5.Controls.Add(this.label5);
-            this.panel_Eigenschaft5.Location = new System.Drawing.Point(17, 224);
-            this.panel_Eigenschaft5.Name = "panel_Eigenschaft5";
-            this.panel_Eigenschaft5.Size = new System.Drawing.Size(491, 38);
-            this.panel_Eigenschaft5.TabIndex = 7;
-            this.panel_Eigenschaft5.Tag = "5";
-            // 
-            // textBox_Eigenschaft5
-            // 
-            this.textBox_Eigenschaft5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox_Eigenschaft5.Location = new System.Drawing.Point(180, 0);
-            this.textBox_Eigenschaft5.Name = "textBox_Eigenschaft5";
-            this.textBox_Eigenschaft5.Size = new System.Drawing.Size(212, 43);
-            this.textBox_Eigenschaft5.TabIndex = 1;
-            this.textBox_Eigenschaft5.Tag = "5";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(180, 37);
-            this.label5.TabIndex = 0;
-            this.label5.Tag = "5";
-            this.label5.Text = "Eigenschaft 5:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel_Eigenschaft4
-            // 
-            this.panel_Eigenschaft4.Controls.Add(this.label10);
-            this.panel_Eigenschaft4.Controls.Add(this.checkBox4);
-            this.panel_Eigenschaft4.Controls.Add(this.textBox_Eigenschaft4);
-            this.panel_Eigenschaft4.Controls.Add(this.label4);
-            this.panel_Eigenschaft4.Location = new System.Drawing.Point(17, 180);
-            this.panel_Eigenschaft4.Name = "panel_Eigenschaft4";
-            this.panel_Eigenschaft4.Size = new System.Drawing.Size(491, 38);
-            this.panel_Eigenschaft4.TabIndex = 6;
-            this.panel_Eigenschaft4.Tag = "4";
-            // 
-            // textBox_Eigenschaft4
-            // 
-            this.textBox_Eigenschaft4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox_Eigenschaft4.Location = new System.Drawing.Point(180, 0);
-            this.textBox_Eigenschaft4.Name = "textBox_Eigenschaft4";
-            this.textBox_Eigenschaft4.Size = new System.Drawing.Size(212, 43);
-            this.textBox_Eigenschaft4.TabIndex = 1;
-            this.textBox_Eigenschaft4.Tag = "4";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(180, 37);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Eigenschaft 4:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel_Eigenschaft3
-            // 
-            this.panel_Eigenschaft3.Controls.Add(this.label9);
-            this.panel_Eigenschaft3.Controls.Add(this.checkBox3);
-            this.panel_Eigenschaft3.Controls.Add(this.textBox_Eigenschaft3);
-            this.panel_Eigenschaft3.Controls.Add(this.label3);
-            this.panel_Eigenschaft3.Location = new System.Drawing.Point(17, 136);
-            this.panel_Eigenschaft3.Name = "panel_Eigenschaft3";
-            this.panel_Eigenschaft3.Size = new System.Drawing.Size(491, 38);
-            this.panel_Eigenschaft3.TabIndex = 5;
-            this.panel_Eigenschaft3.Tag = "3";
-            // 
-            // textBox_Eigenschaft3
-            // 
-            this.textBox_Eigenschaft3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox_Eigenschaft3.Location = new System.Drawing.Point(180, 0);
-            this.textBox_Eigenschaft3.Name = "textBox_Eigenschaft3";
-            this.textBox_Eigenschaft3.Size = new System.Drawing.Size(212, 43);
-            this.textBox_Eigenschaft3.TabIndex = 1;
-            this.textBox_Eigenschaft3.Tag = "3";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 37);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Eigenschaft 3:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel_Eigenschaft2
-            // 
-            this.panel_Eigenschaft2.Controls.Add(this.label8);
-            this.panel_Eigenschaft2.Controls.Add(this.checkBox2);
-            this.panel_Eigenschaft2.Controls.Add(this.textBox_Eigenschaft2);
-            this.panel_Eigenschaft2.Controls.Add(this.label1);
-            this.panel_Eigenschaft2.Location = new System.Drawing.Point(17, 92);
-            this.panel_Eigenschaft2.Name = "panel_Eigenschaft2";
-            this.panel_Eigenschaft2.Size = new System.Drawing.Size(491, 38);
-            this.panel_Eigenschaft2.TabIndex = 4;
-            this.panel_Eigenschaft2.Tag = "2";
-            // 
-            // textBox_Eigenschaft2
-            // 
-            this.textBox_Eigenschaft2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox_Eigenschaft2.Location = new System.Drawing.Point(180, 0);
-            this.textBox_Eigenschaft2.Name = "textBox_Eigenschaft2";
-            this.textBox_Eigenschaft2.Size = new System.Drawing.Size(212, 43);
-            this.textBox_Eigenschaft2.TabIndex = 1;
-            this.textBox_Eigenschaft2.Tag = "2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Eigenschaft 2:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel_Eigenschaft1
-            // 
-            this.panel_Eigenschaft1.Controls.Add(this.label7);
-            this.panel_Eigenschaft1.Controls.Add(this.checkBox1);
-            this.panel_Eigenschaft1.Controls.Add(this.textBox_Eigenschaft1);
-            this.panel_Eigenschaft1.Controls.Add(this.label2);
-            this.panel_Eigenschaft1.Location = new System.Drawing.Point(17, 48);
-            this.panel_Eigenschaft1.Name = "panel_Eigenschaft1";
-            this.panel_Eigenschaft1.Size = new System.Drawing.Size(491, 38);
-            this.panel_Eigenschaft1.TabIndex = 3;
-            this.panel_Eigenschaft1.Tag = "1";
-            // 
-            // textBox_Eigenschaft1
-            // 
-            this.textBox_Eigenschaft1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox_Eigenschaft1.Location = new System.Drawing.Point(180, 0);
-            this.textBox_Eigenschaft1.Name = "textBox_Eigenschaft1";
-            this.textBox_Eigenschaft1.Size = new System.Drawing.Size(212, 43);
-            this.textBox_Eigenschaft1.TabIndex = 1;
-            this.textBox_Eigenschaft1.Tag = "1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 37);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Eigenschaft 1:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label_Karten
-            // 
-            this.label_Karten.Location = new System.Drawing.Point(283, 314);
-            this.label_Karten.Name = "label_Karten";
-            this.label_Karten.Size = new System.Drawing.Size(225, 37);
-            this.label_Karten.TabIndex = 1;
-            this.label_Karten.Tag = "3";
-            this.label_Karten.Text = "Karten def. >";
-            this.label_Karten.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Karten.Click += new System.EventHandler(this.label_QuartetteDefinieren_Click);
-            this.label_Karten.MouseLeave += new System.EventHandler(this.label_NewQuartett_MouseLeave);
-            this.label_Karten.MouseHover += new System.EventHandler(this.label_NewQuartett_MouseHover);
-            // 
-            // label_Deckeigenschaften
-            // 
-            this.label_Deckeigenschaften.Location = new System.Drawing.Point(12, 314);
-            this.label_Deckeigenschaften.Name = "label_Deckeigenschaften";
-            this.label_Deckeigenschaften.Size = new System.Drawing.Size(269, 37);
-            this.label_Deckeigenschaften.TabIndex = 0;
-            this.label_Deckeigenschaften.Tag = "1";
-            this.label_Deckeigenschaften.Text = "< Deck def.";
-            this.label_Deckeigenschaften.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label_Deckeigenschaften.Click += new System.EventHandler(this.label_QuartetteDefinieren_Click);
-            this.label_Deckeigenschaften.MouseLeave += new System.EventHandler(this.label_NewQuartett_MouseLeave);
-            this.label_Deckeigenschaften.MouseHover += new System.EventHandler(this.label_NewQuartett_MouseHover);
-            // 
             // panel_Eigenschaften
             // 
             this.panel_Eigenschaften.Controls.Add(this.label_QuartetteDefinieren);
@@ -899,156 +1049,6 @@
             this.textBox_DeckName.Size = new System.Drawing.Size(333, 43);
             this.textBox_DeckName.TabIndex = 1;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(392, 0);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(20, 38);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(412, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 38);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Größer ist besser";
-            // 
-            // label8
-            // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(412, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 38);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Größer ist besser";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(392, 0);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(20, 38);
-            this.checkBox2.TabIndex = 4;
-            this.checkBox2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(412, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 38);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Größer ist besser";
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(392, 0);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(20, 38);
-            this.checkBox3.TabIndex = 4;
-            this.checkBox3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(412, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 38);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Größer ist besser";
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.Checked = true;
-            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(392, 0);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(20, 38);
-            this.checkBox4.TabIndex = 4;
-            this.checkBox4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(412, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 38);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Größer ist besser";
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.Checked = true;
-            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.Location = new System.Drawing.Point(392, 0);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(20, 38);
-            this.checkBox5.TabIndex = 4;
-            this.checkBox5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(412, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 38);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Größer ist besser";
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.Checked = true;
-            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Location = new System.Drawing.Point(392, 0);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(20, 38);
-            this.checkBox6.TabIndex = 4;
-            this.checkBox6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
             // frmDeckEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
@@ -1065,12 +1065,6 @@
             this.Text = "frmDeckEdit";
             this.panel_Controls.ResumeLayout(false);
             this.panel_NewQuartett.ResumeLayout(false);
-            this.panel_KartenDef.ResumeLayout(false);
-            this.panel_Karteninfos.ResumeLayout(false);
-            this.panel_Karteninfos.PerformLayout();
-            this.panel_KartenInhalte.ResumeLayout(false);
-            this.panel_KartenInhalte.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).EndInit();
             this.panel_QuartettDef.ResumeLayout(false);
             this.panel_Eigenschaft6.ResumeLayout(false);
             this.panel_Eigenschaft6.PerformLayout();
@@ -1084,6 +1078,12 @@
             this.panel_Eigenschaft2.PerformLayout();
             this.panel_Eigenschaft1.ResumeLayout(false);
             this.panel_Eigenschaft1.PerformLayout();
+            this.panel_KartenDef.ResumeLayout(false);
+            this.panel_Karteninfos.ResumeLayout(false);
+            this.panel_Karteninfos.PerformLayout();
+            this.panel_KartenInhalte.ResumeLayout(false);
+            this.panel_KartenInhalte.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).EndInit();
             this.panel_Eigenschaften.ResumeLayout(false);
             this.panel_Eigenschaften.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnzahlQuartetts)).EndInit();
