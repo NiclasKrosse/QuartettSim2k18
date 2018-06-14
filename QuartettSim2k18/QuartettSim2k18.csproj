@@ -82,6 +82,9 @@
     <EmbeddedResource Include="frmDeckEdit.resx">
       <DependentUpon>frmDeckEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGameplay.resx">
+      <DependentUpon>frmGameplay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +116,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Öffnen_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="new 1.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
