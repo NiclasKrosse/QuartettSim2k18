@@ -38,13 +38,21 @@ namespace QuartettSim2k18
 
         private void button_SpielStarten_Click(object sender, EventArgs e)
         {
-            frmGameplay myFrmGameplay = new frmGameplay();
-            myFrmGameplay.myDeckStructure = myDeckStructure;
-            if (myDeckStructure.listOfQuartetts.Count != 0)
+            try
             {
-                myFrmGameplay.Init();
-                myFrmGameplay.Show();
+                frmGameplay myFrmGameplay = new frmGameplay();
+                myFrmGameplay.myDeckStructure = myDeckStructure;
+                if (myDeckStructure.listOfQuartetts.Count != 0)
+                {
+                    myFrmGameplay.Init();
+                    myFrmGameplay.Show();
+                }
             }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+            }
+
         }
     }
 }
