@@ -366,7 +366,25 @@ namespace QuartettSim2k18
 
                 if (pictureBox_Image.ImageLocation != "")
                 {
-                    nCard.cardImagePath = pictureBox_Image.ImageLocation;
+                    nCard.cardImagePath = pictureBox_Image.ImageLocation; 
+                    //todo Bilder in den Exortpfad kopieren
+                    //todo Ordner Generieren, wenn nicht exitstiert
+                    //todo da feste Ordnerstruktur, den Pfad nicht aus der XML auslesen
+                    if (! Directory.Exists(mDeckPath))
+                    {
+                        Directory.CreateDirectory(mDeckPath);
+                    }
+
+                    string imageExportPath = mDeckPath +@"\" + mDeckName + @"\" + (mQuartetts.Count+1).ToString() + @"\";
+                    if (!Directory.Exists(imageExportPath))
+                    {
+                        Directory.CreateDirectory(imageExportPath);
+                    }
+
+                    //todo Dateiendung bekommen
+                    String dateiendung = nCard.cardImagePath.Remove(0, nCard.cardImagePath.LastIndexOf("."));
+
+                    File.Copy(nCard.cardImagePath,imageExportPath + (mQuartettCards.Count+1).ToString() + dateiendung);
                 }
 
                 for (int i = 1; i < mProprtiesAmount + 1; i++)

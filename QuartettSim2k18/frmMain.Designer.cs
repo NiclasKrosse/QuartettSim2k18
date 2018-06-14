@@ -36,6 +36,7 @@
             // button_Spielregeln
             // 
             this.button_Spielregeln.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Spielregeln.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_Spielregeln.Location = new System.Drawing.Point(317, 113);
             this.button_Spielregeln.Margin = new System.Windows.Forms.Padding(7, 10, 7, 10);
             this.button_Spielregeln.Name = "button_Spielregeln";
@@ -47,6 +48,7 @@
             // button_Start
             // 
             this.button_Start.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Start.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_Start.Location = new System.Drawing.Point(16, 113);
             this.button_Start.Margin = new System.Windows.Forms.Padding(7, 10, 7, 10);
             this.button_Start.Name = "button_Start";
@@ -69,13 +71,14 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 38F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(537, 187);
             this.Controls.Add(this.label_Überschrift);
             this.Controls.Add(this.button_Start);
             this.Controls.Add(this.button_Spielregeln);
-            this.Font = new System.Drawing.Font("Segoe Marker", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(7, 10, 7, 10);
             this.MaximizeBox = false;
