@@ -186,6 +186,8 @@ namespace QuartettSim2k18
                 }
             }
             label_KartenGegner.Text = "COM1 hat noch " + mKartenSpieler2.Count.ToString() + " Karten!\nCOM1 hat "+PunkteSpieler2 +" Punkte.";
+            label_Status.Text =
+                "Es befinden sich noch " + mKartenRest.Count.ToString() + " Karten auf dem Restestapel!";
 
         }
 

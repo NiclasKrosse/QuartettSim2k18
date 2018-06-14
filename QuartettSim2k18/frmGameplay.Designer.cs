@@ -167,13 +167,12 @@
             // 
             // label_Status
             // 
-            this.label_Status.AutoSize = true;
             this.label_Status.Font = new System.Drawing.Font("Cooper Black", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Status.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label_Status.Location = new System.Drawing.Point(341, 61);
             this.label_Status.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label_Status.Name = "label_Status";
-            this.label_Status.Size = new System.Drawing.Size(157, 51);
+            this.label_Status.Size = new System.Drawing.Size(193, 51);
             this.label_Status.TabIndex = 2;
             this.label_Status.Text = "Fragen ob anderer \r\nSpieler Kleinwagen\r\nhat\r\n";
             // 
