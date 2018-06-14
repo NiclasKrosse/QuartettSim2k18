@@ -32,18 +32,18 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_Kartenname = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label_P1 = new System.Windows.Forms.Label();
+            this.label_P2 = new System.Windows.Forms.Label();
+            this.label_P3 = new System.Windows.Forms.Label();
+            this.label_P4 = new System.Windows.Forms.Label();
+            this.label_P5 = new System.Windows.Forms.Label();
+            this.label_P6 = new System.Windows.Forms.Label();
+            this.label_Status = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.label_KartenGegner = new System.Windows.Forms.Label();
+            this.label_KartenDu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,118 +59,123 @@
             this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // label1
+            // label_Kartenname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(136, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Kleinwagen";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label_Kartenname.AutoSize = true;
+            this.label_Kartenname.Font = new System.Drawing.Font("Cooper Black", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Kartenname.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label_Kartenname.Location = new System.Drawing.Point(16, 26);
+            this.label_Kartenname.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label_Kartenname.Name = "label_Kartenname";
+            this.label_Kartenname.Size = new System.Drawing.Size(103, 17);
+            this.label_Kartenname.TabIndex = 2;
+            this.label_Kartenname.Text = "Kartenname";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(66, 78);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 51);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(301, 263);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // label_P1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(156, 366);
-            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 32);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label1";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label_P1.AutoSize = true;
+            this.label_P1.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_P1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label_P1.Location = new System.Drawing.Point(16, 322);
+            this.label_P1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label_P1.Name = "label_P1";
+            this.label_P1.Size = new System.Drawing.Size(68, 21);
+            this.label_P1.TabIndex = 4;
+            this.label_P1.Tag = "0";
+            this.label_P1.Text = "label1";
+            this.label_P1.Click += new System.EventHandler(this.EigenschaftSelected);
             // 
-            // label3
+            // label_P2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label3.Location = new System.Drawing.Point(154, 398);
-            this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 32);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label2";
-            this.label3.Click += new System.EventHandler(this.label2_Click);
+            this.label_P2.AutoSize = true;
+            this.label_P2.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_P2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label_P2.Location = new System.Drawing.Point(14, 354);
+            this.label_P2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label_P2.Name = "label_P2";
+            this.label_P2.Size = new System.Drawing.Size(68, 21);
+            this.label_P2.TabIndex = 4;
+            this.label_P2.Tag = "1";
+            this.label_P2.Text = "label2";
+            this.label_P2.Click += new System.EventHandler(this.EigenschaftSelected);
             // 
-            // label4
+            // label_P3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label4.Location = new System.Drawing.Point(156, 436);
-            this.label4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 32);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label3";
-            this.label4.Click += new System.EventHandler(this.label2_Click);
+            this.label_P3.AutoSize = true;
+            this.label_P3.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_P3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label_P3.Location = new System.Drawing.Point(16, 392);
+            this.label_P3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label_P3.Name = "label_P3";
+            this.label_P3.Size = new System.Drawing.Size(68, 21);
+            this.label_P3.TabIndex = 4;
+            this.label_P3.Tag = "2";
+            this.label_P3.Text = "label3";
+            this.label_P3.Click += new System.EventHandler(this.EigenschaftSelected);
             // 
-            // label5
+            // label_P4
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label5.Location = new System.Drawing.Point(154, 474);
-            this.label5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 32);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "label4";
-            this.label5.Click += new System.EventHandler(this.label2_Click);
+            this.label_P4.AutoSize = true;
+            this.label_P4.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_P4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label_P4.Location = new System.Drawing.Point(14, 430);
+            this.label_P4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label_P4.Name = "label_P4";
+            this.label_P4.Size = new System.Drawing.Size(68, 21);
+            this.label_P4.TabIndex = 4;
+            this.label_P4.Tag = "3";
+            this.label_P4.Text = "label4";
+            this.label_P4.Click += new System.EventHandler(this.EigenschaftSelected);
             // 
-            // label6
+            // label_P5
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label6.Location = new System.Drawing.Point(154, 512);
-            this.label6.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 32);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "label5";
-            this.label6.Click += new System.EventHandler(this.label2_Click);
+            this.label_P5.AutoSize = true;
+            this.label_P5.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_P5.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label_P5.Location = new System.Drawing.Point(14, 468);
+            this.label_P5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label_P5.Name = "label_P5";
+            this.label_P5.Size = new System.Drawing.Size(68, 21);
+            this.label_P5.TabIndex = 4;
+            this.label_P5.Tag = "4";
+            this.label_P5.Text = "label5";
+            this.label_P5.Click += new System.EventHandler(this.EigenschaftSelected);
             // 
-            // label7
+            // label_P6
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label7.Location = new System.Drawing.Point(154, 550);
-            this.label7.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 32);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "label6";
-            this.label7.Click += new System.EventHandler(this.label2_Click);
+            this.label_P6.AutoSize = true;
+            this.label_P6.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_P6.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label_P6.Location = new System.Drawing.Point(14, 506);
+            this.label_P6.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label_P6.Name = "label_P6";
+            this.label_P6.Size = new System.Drawing.Size(68, 21);
+            this.label_P6.TabIndex = 4;
+            this.label_P6.Tag = "5";
+            this.label_P6.Text = "label6";
+            this.label_P6.Click += new System.EventHandler(this.EigenschaftSelected);
             // 
-            // label8
+            // label_Status
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cooper Black", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label8.Location = new System.Drawing.Point(405, 120);
-            this.label8.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(234, 75);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Fragen ob anderer \r\nSpieler Kleinwagen\r\nhat\r\n";
-            this.label8.Click += new System.EventHandler(this.label1_Click);
+            this.label_Status.AutoSize = true;
+            this.label_Status.Font = new System.Drawing.Font("Cooper Black", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Status.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label_Status.Location = new System.Drawing.Point(341, 61);
+            this.label_Status.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label_Status.Name = "label_Status";
+            this.label_Status.Size = new System.Drawing.Size(157, 51);
+            this.label_Status.TabIndex = 2;
+            this.label_Status.Text = "Fragen ob anderer \r\nSpieler Kleinwagen\r\nhat\r\n";
             // 
             // label12
             // 
@@ -180,59 +185,56 @@
             this.label12.Location = new System.Drawing.Point(222, 312);
             this.label12.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 32);
+            this.label12.Size = new System.Drawing.Size(0, 21);
             this.label12.TabIndex = 6;
             // 
-            // label13
+            // label_KartenGegner
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Cooper Black", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label13.Location = new System.Drawing.Point(712, 78);
-            this.label13.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(84, 50);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "COM1:\r\n\r\n";
-            this.label13.Click += new System.EventHandler(this.label1_Click);
+            this.label_KartenGegner.AutoSize = true;
+            this.label_KartenGegner.Font = new System.Drawing.Font("Cooper Black", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_KartenGegner.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label_KartenGegner.Location = new System.Drawing.Point(341, 133);
+            this.label_KartenGegner.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label_KartenGegner.Name = "label_KartenGegner";
+            this.label_KartenGegner.Size = new System.Drawing.Size(58, 34);
+            this.label_KartenGegner.TabIndex = 2;
+            this.label_KartenGegner.Text = "COM1:\r\n\r\n";
             // 
-            // label14
+            // label_KartenDu
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Cooper Black", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label14.Location = new System.Drawing.Point(712, 103);
-            this.label14.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(52, 50);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Du:\r\n\r\n";
-            this.label14.Click += new System.EventHandler(this.label1_Click);
+            this.label_KartenDu.AutoSize = true;
+            this.label_KartenDu.Font = new System.Drawing.Font("Cooper Black", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_KartenDu.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label_KartenDu.Location = new System.Drawing.Point(341, 167);
+            this.label_KartenDu.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label_KartenDu.Name = "label_KartenDu";
+            this.label_KartenDu.Size = new System.Drawing.Size(35, 34);
+            this.label_KartenDu.TabIndex = 2;
+            this.label_KartenDu.Text = "Du:\r\n\r\n";
             // 
             // frmGameplay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 54F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Orchid;
-            this.ClientSize = new System.Drawing.Size(945, 737);
+            this.ClientSize = new System.Drawing.Size(550, 575);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label_P6);
+            this.Controls.Add(this.label_P5);
+            this.Controls.Add(this.label_P4);
+            this.Controls.Add(this.label_P3);
+            this.Controls.Add(this.label_P2);
+            this.Controls.Add(this.label_P1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_KartenDu);
+            this.Controls.Add(this.label_KartenGegner);
+            this.Controls.Add(this.label_Status);
+            this.Controls.Add(this.label_Kartenname);
             this.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.Name = "frmGameplay";
             this.Text = "frmGameplay";
             this.TransparencyKey = System.Drawing.Color.WhiteSmoke;
-            this.Load += new System.EventHandler(this.frmGameplay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -243,17 +245,17 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_Kartenname;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label_P1;
+        private System.Windows.Forms.Label label_P2;
+        private System.Windows.Forms.Label label_P3;
+        private System.Windows.Forms.Label label_P4;
+        private System.Windows.Forms.Label label_P5;
+        private System.Windows.Forms.Label label_P6;
+        private System.Windows.Forms.Label label_Status;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label_KartenGegner;
+        private System.Windows.Forms.Label label_KartenDu;
     }
 }

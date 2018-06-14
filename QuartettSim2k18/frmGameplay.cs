@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace QuartettSim2k18
 {
+    //Author Kateryna Dik
     public partial class frmGameplay : Form
     {
         public DeckStructure myDeckStructure;
@@ -31,7 +32,7 @@ namespace QuartettSim2k18
         {
             mMaxKartenCount = myDeckStructure.listOfQuartetts.Count * 4 / 3;
             LitenFüllen();
-            myCurrentQuartettCard = mKartenSpieler1.First();
+            CurrentCard = mKartenSpieler1.FirstOrDefault();
         }
 
         private void LitenFüllen()
@@ -75,7 +76,7 @@ namespace QuartettSim2k18
                 foreach (DeckStructure.QuartettCard tmpQuartettCard in mKartenRest)
                 {
                     Random nZufall = new Random();
-                    if (nZufall.Next(1,3) == 1 && mKartenSpieler1.Count < mMaxKartenCount)
+                    if (nZufall.Next(1, 3) == 1 && mKartenSpieler1.Count < mMaxKartenCount)
                     {
                         mKartenSpieler1.Add(tmpQuartettCard);
                     }
@@ -85,6 +86,12 @@ namespace QuartettSim2k18
                     }
                 }
             }
+            mPropertyLabelList.Add(label_P1);
+            mPropertyLabelList.Add(label_P2);
+            mPropertyLabelList.Add(label_P3);
+            mPropertyLabelList.Add(label_P4);
+            mPropertyLabelList.Add(label_P5);
+            mPropertyLabelList.Add(label_P6);
 
         }
 
@@ -93,7 +100,7 @@ namespace QuartettSim2k18
         private void EigenschaftSelected(object sender, EventArgs e)
         {
             DeckStructure.CardProperties selectedCardProperty;
-            Label nPropertyLabel = (Label) sender;
+            Label nPropertyLabel = (Label)sender;
             selectedCardProperty = myCurrentQuartettCard.cardProperties.ElementAt(int.Parse(nPropertyLabel.Tag.ToString()));
 
             VergleicheKarte(selectedCardProperty);
@@ -108,8 +115,42 @@ namespace QuartettSim2k18
             set
             {
                 myCurrentQuartettCard = value;
-                //todo Anzeige überarbeiten
+                UpdateShownCard();
             }
+        }
+
+        //todo Nur so viele Labels wie benötigt einblenden
+        private List<Label> mPropertyLabelList = new List<Label>();
+        private void UpdateShownCard()
+        {
+            label_Kartenname.Text = myCurrentQuartettCard.cardName;
+            //Bild laden
+            try
+            {
+                pictureBox1.ImageLocation = myCurrentQuartettCard.cardImagePath;
+                pictureBox1.Load();
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            int counter = 0;
+            foreach (Label tmpLabel in mPropertyLabelList)
+            {
+                if (counter < myCurrentQuartettCard.cardProperties.Count && myCurrentQuartettCard.cardProperties.ElementAt(counter).propertyName != null)
+                {
+                    tmpLabel.Text = myCurrentQuartettCard.cardProperties.ElementAt(counter).propertyName + ": " +
+                                    myCurrentQuartettCard.cardProperties.ElementAt(counter).propertyDisplayValue;
+                }
+                else
+                {
+                    tmpLabel.Text = "";
+                }
+
+                counter++;
+            }
+
         }
 
         //todo Überprüfen ob Quartett vollständig
@@ -120,39 +161,54 @@ namespace QuartettSim2k18
             {
                 if (mKartenRest.Count != 0)
                 {
-                    mKartenSpieler1.Add(mKartenRest.First());
+                    DeckStructure.QuartettCard tmpcard = mKartenRest.First();
+                    mKartenSpieler1.Add(tmpcard);
+                    mKartenRest.Remove(tmpcard);
                 }
                 else
                 {
-                    EndGame(2);
+                    EndGame();
                 }
             }
-
+            label_KartenDu.Text = "Du hast noch " + mKartenSpieler1.Count.ToString() + " Karten!\nDu hast "+PunkteSpieler1+" Punkte.";
             //Hat Spieler 2 noch Karten
             if (mKartenSpieler2.Count == 0)
             {
                 if (mKartenRest.Count != 0)
                 {
-                    mKartenSpieler2.Add(mKartenRest.First());
+                    DeckStructure.QuartettCard tmpcard = mKartenRest.First();
+                    mKartenSpieler1.Add(tmpcard);
+                    mKartenRest.Remove(tmpcard);
                 }
                 else
                 {
-                    EndGame(1);
+                    EndGame();
                 }
             }
+            label_KartenGegner.Text = "COM1 hat noch " + mKartenSpieler2.Count.ToString() + " Karten!\nCOM1 hat "+PunkteSpieler2 +" Punkte.";
+
         }
 
         //Todo eventuell Punkezähler implementieren
-        private void EndGame(int winner)
+        private int PunkteSpieler1;
+        private int PunkteSpieler2;
+
+        private void EndGame()
         {
-            if (winner == 1)
+            if (PunkteSpieler1 > PunkteSpieler2)
             {
                 MessageBox.Show("Du hast gewonnen!\nGlückwunsch", "Glückwunsch", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
-            else
+            else if (PunkteSpieler2 < PunkteSpieler1)
             {
                 MessageBox.Show("Du hast verloren!\nDas ist unschön", "Verloren", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            else
+            
+            {
+                MessageBox.Show("Unentschieden!\nAlle haben gewonnen und so...", "Unentschieden", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
             this.Close();
@@ -165,7 +221,10 @@ namespace QuartettSim2k18
             //todo Karte vom Gegner bekommen
             DeckStructure.QuartettCard karteDesGegners = GetKarteFromOpponent();
             DeckStructure.CardProperties propertyDesGegners = new DeckStructure.CardProperties();
-
+            if (karteDesGegners.cardProperties is null)
+            {
+                return;
+            }
             foreach (DeckStructure.CardProperties tmpProperties in karteDesGegners.cardProperties)
             {
                 if (tmpProperties.propertyName == eigenschaft.propertyName)
@@ -187,6 +246,10 @@ namespace QuartettSim2k18
                     //Der Gegner bekommt die Karte
                     RemoveKarteFromMe();
                 }
+                else
+                {
+                    AddKarteToRest(karteDesGegners);
+                }
             }
             else
             {
@@ -200,6 +263,10 @@ namespace QuartettSim2k18
                     //Ich bekomme die Karte
                     RemoveKarteFromOpponent(karteDesGegners);
                 }
+                else
+                {
+                    AddKarteToRest(karteDesGegners);
+                }
             }
         }
 
@@ -208,7 +275,7 @@ namespace QuartettSim2k18
         {
             DeckStructure.QuartettCard myLocalCard = new DeckStructure.QuartettCard();
             Random nZufallszahl = new Random();
-            myLocalCard = mKartenSpieler2.ElementAt(nZufallszahl.Next(1, mKartenSpieler2.Count));
+            if (mKartenSpieler2.Count!= 0) myLocalCard = mKartenSpieler2.ElementAt(nZufallszahl.Next(0, mKartenSpieler2.Count));
             return myLocalCard;
         }
 
@@ -216,13 +283,32 @@ namespace QuartettSim2k18
         {
             mKartenSpieler2.Remove(myLocalCard);
             mKartenSpieler1.Add(myLocalCard);
+            PunkteSpieler1 += 10;
         }
 
         private void RemoveKarteFromMe()
         {
             mKartenSpieler1.Remove(CurrentCard);
             mKartenSpieler2.Add(CurrentCard);
-            CurrentCard = mKartenSpieler1.First();
+            if (mKartenSpieler1.Count > 0)
+            {
+                CurrentCard = mKartenSpieler1.First();
+            }
+            
+            PunkteSpieler2 += 10;
+        }
+
+        private void AddKarteToRest(DeckStructure.QuartettCard myCard)
+        {
+            mKartenSpieler1.Remove(CurrentCard);
+            mKartenSpieler2.Remove(myCard);
+            mKartenRest.Add(myCard);
+            if (mKartenSpieler1.Count > 0)
+            {
+                CurrentCard = mKartenSpieler1.First();
+            }
+
+            
         }
 
         #endregion
@@ -230,31 +316,6 @@ namespace QuartettSim2k18
         public frmGameplay()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmGameplay_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
