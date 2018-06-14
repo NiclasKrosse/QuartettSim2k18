@@ -39,7 +39,7 @@ namespace QuartettSim2k18
         private void button_SpielStarten_Click(object sender, EventArgs e)
         {
             frmGameplay myFrmGameplay = new frmGameplay();
-            myFrmGameplay.MyDeckStructure = myDeckStructure;
+            myFrmGameplay.myDeckStructure = myDeckStructure;
             if (myDeckStructure.listOfQuartetts.Count != 0)
             {
                 myFrmGameplay.Show();

@@ -176,9 +176,9 @@
             // panel_NewQuartett
             // 
             this.panel_NewQuartett.Controls.Add(this.label_Caption);
+            this.panel_NewQuartett.Controls.Add(this.panel_Eigenschaften);
             this.panel_NewQuartett.Controls.Add(this.panel_QuartettDef);
             this.panel_NewQuartett.Controls.Add(this.panel_KartenDef);
-            this.panel_NewQuartett.Controls.Add(this.panel_Eigenschaften);
             this.panel_NewQuartett.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_NewQuartett.Location = new System.Drawing.Point(0, 0);
             this.panel_NewQuartett.Name = "panel_NewQuartett";

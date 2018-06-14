@@ -12,7 +12,7 @@ namespace QuartettSim2k18
 {
     public partial class frmGameplay : Form
     {
-        public DeckStructure MyDeckStructure;
+        public DeckStructure myDeckStructure;
         public GameMode MyGameMode;
 
         public enum GameMode
