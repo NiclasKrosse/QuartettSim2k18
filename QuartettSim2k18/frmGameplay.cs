@@ -21,7 +21,7 @@ namespace QuartettSim2k18
         private List<DeckStructure.QuartettCard> mKartenSpieler2 = new List<DeckStructure.QuartettCard>();
         private List<DeckStructure.QuartettCard> mKartenRest = new List<DeckStructure.QuartettCard>();
 
-        private int nMaxKartenCount;
+        private int mMaxKartenCount;
 
         //todo 1. Karten Verteilen
         //todo 2. Vergleiche Einbauen
@@ -29,7 +29,7 @@ namespace QuartettSim2k18
 
         public void Init()
         {
-            nMaxKartenCount = myDeckStructure.listOfQuartetts.Count * 4 / 3;
+            mMaxKartenCount = myDeckStructure.listOfQuartetts.Count * 4 / 3;
             LitenFüllen();
             myCurrentQuartettCard = mKartenSpieler1.First();
         }
@@ -47,14 +47,14 @@ namespace QuartettSim2k18
                         switch (nZufall.Next(1, 4))
                         {
                             case 1:
-                                if (mKartenSpieler1.Count <= nMaxKartenCount)
+                                if (mKartenSpieler1.Count <= mMaxKartenCount)
                                 {
                                     mKartenSpieler1.Add(tmpQuartettCard);
                                     nKarteZugewiesen = true;
                                 }
                                 break;
                             case 2:
-                                if (mKartenSpieler2.Count <= nMaxKartenCount)
+                                if (mKartenSpieler2.Count <= mMaxKartenCount)
                                 {
                                     mKartenSpieler2.Add(tmpQuartettCard);
                                     nKarteZugewiesen = true;
@@ -70,16 +70,16 @@ namespace QuartettSim2k18
                 }
             }
             //Durch den Restestapel gehen, falls Karten fehlen sollten
-            while (mKartenSpieler1.Count < nMaxKartenCount || mKartenSpieler2.Count < nMaxKartenCount)
+            while (mKartenSpieler1.Count < mMaxKartenCount || mKartenSpieler2.Count < mMaxKartenCount)
             {
                 foreach (DeckStructure.QuartettCard tmpQuartettCard in mKartenRest)
                 {
                     Random nZufall = new Random();
-                    if (nZufall.Next(1,3) == 1 && mKartenSpieler1.Count < nMaxKartenCount)
+                    if (nZufall.Next(1,3) == 1 && mKartenSpieler1.Count < mMaxKartenCount)
                     {
                         mKartenSpieler1.Add(tmpQuartettCard);
                     }
-                    else if (nZufall.Next(1, 3) == 1 && mKartenSpieler2.Count < nMaxKartenCount)
+                    else if (nZufall.Next(1, 3) == 1 && mKartenSpieler2.Count < mMaxKartenCount)
                     {
                         mKartenSpieler2.Add(tmpQuartettCard);
                     }
@@ -92,7 +92,11 @@ namespace QuartettSim2k18
 
         private void EigenschaftSelected(object sender, EventArgs e)
         {
-            VergleicheKarte();
+            DeckStructure.CardProperties selectedCardProperty;
+            Label nPropertyLabel = (Label) sender;
+            selectedCardProperty = myCurrentQuartettCard.cardProperties.ElementAt(int.Parse(nPropertyLabel.Tag.ToString()));
+
+            VergleicheKarte(selectedCardProperty);
             CheckIfPlayerHasCardsLeft();
         }
 
