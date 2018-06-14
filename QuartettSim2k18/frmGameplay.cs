@@ -31,6 +31,7 @@ namespace QuartettSim2k18
         {
             nMaxKartenCount = myDeckStructure.listOfQuartetts.Count * 4 / 3;
             LitenFüllen();
+            myCurrentQuartettCard = mKartenSpieler1.First();
         }
 
         private void LitenFüllen()
@@ -88,6 +89,13 @@ namespace QuartettSim2k18
         }
 
         #region Vergleiche
+
+        private void EigenschaftSelected(object sender, EventArgs e)
+        {
+            VergleicheKarte();
+            CheckIfPlayerHasCardsLeft();
+        }
+
         //todo Eigene Karte auswählen
         private DeckStructure.QuartettCard myCurrentQuartettCard;
         private DeckStructure.QuartettCard CurrentCard
@@ -101,6 +109,51 @@ namespace QuartettSim2k18
         }
 
         //todo Überprüfen ob Quartett vollständig
+        private void CheckIfPlayerHasCardsLeft()
+        {
+            //Hat Spieler 1 noch Karten
+            if (mKartenSpieler1.Count == 0)
+            {
+                if (mKartenRest.Count != 0)
+                {
+                    mKartenSpieler1.Add(mKartenRest.First());
+                }
+                else
+                {
+                    EndGame(2);
+                }
+            }
+
+            //Hat Spieler 2 noch Karten
+            if (mKartenSpieler2.Count == 0)
+            {
+                if (mKartenRest.Count != 0)
+                {
+                    mKartenSpieler2.Add(mKartenRest.First());
+                }
+                else
+                {
+                    EndGame(1);
+                }
+            }
+        }
+
+        //Todo eventuell Punkezähler implementieren
+        private void EndGame(int winner)
+        {
+            if (winner == 1)
+            {
+                MessageBox.Show("Du hast gewonnen!\nGlückwunsch", "Glückwunsch", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Du hast verloren!\nDas ist unschön", "Verloren", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            this.Close();
+        }
+
         //todo Überprüfen,ob noch Karten da sind
 
         private void VergleicheKarte(DeckStructure.CardProperties eigenschaft)
@@ -151,7 +204,7 @@ namespace QuartettSim2k18
         {
             DeckStructure.QuartettCard myLocalCard = new DeckStructure.QuartettCard();
             Random nZufallszahl = new Random();
-            myLocalCard = mKartenSpieler2.ElementAt(nZufallszahl.Next(1, mKartenSpieler2.Count + 1));
+            myLocalCard = mKartenSpieler2.ElementAt(nZufallszahl.Next(1, mKartenSpieler2.Count));
             return myLocalCard;
         }
 
