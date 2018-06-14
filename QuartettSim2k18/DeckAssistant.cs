@@ -72,7 +72,7 @@ namespace QuartettSim2k18
             public string propertyName; //z.B. Hubraum, Leistung, Gewicht
             public string propertyDisplayValue; //z.B. [Leistung] 200 PS
             public double propertyValue; //z.B [Leistung]200
-            public Boolean greaterIsBetter; 
+            public Boolean greaterIsBetter; //Bestimmt ob der größere wert beim Verglich der Bessere ist
         }
     }
 }
